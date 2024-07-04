@@ -1,0 +1,14 @@
+body{
+    background-color: black;
+    color:red;
+}
+h1{
+    color: aqua;
+}
+#t3{
+    color: white;
+    text-decoration: dotted;
+    text-decoration: line-through;
+    text-anchor: end;
+
+}
