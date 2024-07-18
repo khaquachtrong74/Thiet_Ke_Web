@@ -1,0 +1,70 @@
+#square {
+    width: 50px;
+    height: 50px;
+    background-color: antiquewhite;
+    ;
+    margin-top: 10px;
+    border-top: 20px;
+    border-radius: 50%;
+    margin-left: 20px;
+
+}
+
+#ip {
+    text-decoration: underline;
+    text-transform: uppercase;
+    background-color: aqua;
+    margin-left: 25px;
+}
+
+#bt {
+    background-color: black;
+    color: whitesmoke;
+    margin-left: 92px;
+    margin-top: -10px;
+    margin-right: 100000px;
+    border: 4px solid snow;
+    border-radius: 20px;
+}
+
+#sq {
+    width: 21px;
+    height: 21px;
+    background-color: white;
+    margin-left: 1px;
+    margin-top: -24px;
+    border-radius: 50%;
+    border: 3px solid darkblue
+}
+
+#sq1 {
+    width: 21px;
+    height: 21px;
+    background-color: aqua;
+    margin-left: 193px;
+    margin-top: -26px;
+    border-radius: 50%;
+    border: 3px solid darkblue
+}
+
+#icon {
+    margin-left: 110px;
+    position: relative;
+    margin-top: 30px;
+
+    inline-size: 8px;
+    border-inline-end: 4px solid red;
+    border-inline-start: 4px solid blue;
+    margin-bottom: 20px;
+}
+
+#ip2 {
+    margin-left: 50px;
+    margin-top: 0px;
+    block-size: 50px;
+}
+
+.html,
+body {
+    background-color: antiquewhite;
+}

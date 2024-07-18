@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.hole {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #333;
+    border-radius: 50%;
+    background-color: #9c7248;
+    margin: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.mole {
+    background-color: #6d3c21;
+}
+
+.hide {
+    display: none;
+}
+
+.score,
+.timer {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.start-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.start-button:hover {
+    background-color: #45a049;
+}

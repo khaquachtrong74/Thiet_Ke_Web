@@ -1,0 +1,31 @@
+div.sales {
+    /* width: 25%; */
+    /* display: inline-block; */
+    /* position: absolute; */
+
+    display: flex;
+
+    padding: 5px;
+    box-sizing: border-box;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+/* 
+div.sales:nth-child(1) {
+    display: flex;
+    align-self: flex-start;
+}
+
+div.sales:nth-child(5) {
+    display: flex;
+    align-items: flex-start;
+} */
+
+div.square {
+    block-size: 25%;
+    width: 25%;
+    background-color: gray;
+    /* position: relative; */
+}

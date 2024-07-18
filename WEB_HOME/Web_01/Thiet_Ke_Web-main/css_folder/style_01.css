@@ -1,0 +1,72 @@
+body#web3 {
+    background-image: url("images/bg_img.jpg");
+    color: whitesmoke;
+    text-align: left;
+    color: mistyrose;
+}
+
+body#web4 {
+    background-image: url("images/download.jpg");
+
+}
+
+#t1 {
+    text-align: left;
+}
+
+#li1 {
+    text-decoration: underline;
+}
+
+#txt {
+    color: red;
+}
+
+#mg {
+    width: 100px;
+
+}
+
+body#web5 {
+    font-family: Arial;
+    font-size: 16px;
+    background-color: #DDFFDD;
+
+}
+
+h6 {
+    color: #4CAF50;
+
+}
+
+#txt5 {
+
+    color: black;
+    font-weight: bolder;
+
+}
+
+#txt4 {
+    font-size: 30px;
+    font-weight: bold;
+    block-size: 100px;
+}
+
+#t_head {
+    background-color: #4CAF50;
+    font-weight: bolder;
+    text-align: center;
+}
+
+td {
+    padding: 5px;
+    text-align: left;
+}
+
+td:hover {
+    background-color: aquamarine;
+}
+
+td:active {
+    background-color: red;
+}
