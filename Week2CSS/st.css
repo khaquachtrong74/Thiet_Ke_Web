@@ -1,0 +1,102 @@
+body{
+    background-color: brown;
+}
+/*CSS header*/
+.HR{
+    text-align: center;
+    font-size: 3rem;
+    color:wheat;
+    text-shadow: 2px 3px 2px white;
+    text-transform: uppercase;
+    animation: doimau;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes doimau{
+    0%{color:red;}
+    20%{color: blue;}
+    50%{color: yellow;}
+    80%{color: aquamarine;}
+    100%{color: red;}
+}
+.M_bar{
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border-radius: 5%;
+}
+.M_bar > li {
+    list-style-type: none;
+    border-left: 3px solid black;
+}
+.M_bar > li > a {
+    
+    text-decoration: none;
+    display: block;
+    padding:1rem;
+}
+.M_bar >li:last-child{
+    margin-left:auto;
+}
+.M_bar > li > a:hover{
+    color: yellow;
+    background-color: aquamarine;
+}
+/*Section */
+.languages{
+    background-color: white;
+    
+}
+.language{
+    overflow: hidden;
+    border-bottom: 3px solid black;
+}
+.language:first-child{
+    margin-top: 10px;
+}
+.language:last-child{
+    border-bottom: none;
+}
+.languages img{
+    width: 100px;
+    float: left;
+    animation: rt 0.001s linear infinite;
+}
+@keyframes rt{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+/*css footer*/
+footer{
+    background-color: blue;
+    font-size: 2em;
+    margin-top: 10px;
+    overflow: hidden;
+    
+}
+footer>span{
+    animation: move linear 0.1s infinite;
+    position: relative;
+    
+}
+
+@keyframes move{
+    from{
+        left:0%;
+    }
+    to{
+        left:100%;
+    }
+}
+.M_bar{
+    font-size: 1.5em;
+}
+.sub .M_bar{
+    display: none !important;
+    position: absolute;
+}
+.sub:hover .sub_menu{
+    display: block !important;
+    border-right: 3px solid black;
+}
