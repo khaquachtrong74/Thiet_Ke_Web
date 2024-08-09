@@ -10,5 +10,5 @@ h1{
     text-decoration: dotted;
     text-decoration: line-through;
     text-anchor: end;
-
+    font-family: 'Courier New', Courier, monospace;
 }
