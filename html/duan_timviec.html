@@ -8,46 +8,88 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-    <nav style="">
+    <!-- Khung NAV -->
+    <nav >
         <!-- header -->
         <div class="main_nav">
+            <!-- UL này có 3 LI -->
             <ul class="flex hdr">
-                <i class="fa-solid fa-industry icon"></i>
+                <!-- <i class="fa-solid fa-industry icon"></i> -->
+                 <!-- <img src="../css_folder/z5743230257273_34e81afb2f2513b1f829b2827b87c51d.jpg" alt=""> -->
+                <i class="fa-solid fa-diagram-project" style="margin-top:19px;margin-right:10px;transform: rotate(50deg); "></i>
                 <li style="padding-top:15px;"><strong> EMPLOYMENT <br> SUPERMARKET </strong></li>
-                <li class="mid">
+                <!-- Li giữa chứa cơ hội việc làm cho tới người tìm việc -->
+                <li class="mid" >
                     <ul class="middle_hdr flex">
                         <div class="flex mid_h">
-                            <li ><strong>Cơ hội việc làm</strong></li>
-                            <li class="sb">
+                            <li class="it"><strong>Cơ hội việc làm</strong></li>
+                            <li class="sb it">
                                 <span class="ar_sub">Công cụ &#9662;</span>
                                 <ul class="mid_h submenu">
-                                    <li>01</li>
-                                    <li>02</li>
-                                    <li>03</li>
+                                    <li class="it">Tìm kiếm</li>
+                                    <li class="it">Ăn năn sám hối</li>
+                                    <li class="it">Không biết phải làm gì</li>
                                 </ul>
                             </li>
                         </div>
                         <div class="flex mid_h">
-                            <li class="sb">
+                            <li class="sb it">
                                 <span class="ar_sub">Khu vực &#9662;</span>
-                                <ul class="mid_h submenu">
-                                    <li>01</li>
-                                    <li>02</li>
-                                    <li>03</li>
+                                <ul class="mid_h submenu it">
+                                    <li class="it" style="width:100%">01</li>
+                                    <li class="it">02</li>
+                                    <li class="it">03</li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="it">
                                 Người tìm việc <br><strong>Đăng ký/Đăng nhập</strong>
                             </li>
                         </div>
                     </ul>
                 </li>
-                <li></li>
+                <!-- tuyển dụng -->
+                <li id="tuyendung">Dành cho <br> <strong>Nhà tuyển dụng</strong> &#x1F1FB;&#x1F1F3;
+                <img src="../css_folder/VietNam.jpg" style="width:30px; top:-15px;left:-30px;position:relative" alt="Việt Nam Tôi Yêu">
+                </li>
             </ul>
         </div>
     </nav>
     <main>
+        <!-- Đường line màu xanh đậm -->
         <section class="line"></section>
+        <!-- Khung chứa các div -->
+        <section class="subject flex">
+            <div id="tbx">
+                <button class="btn"><i class="fa-solid fa-magnifying-glass" style="transform:rotate(90deg)"></i></button>
+                
+                    <input type="text" height="30" style="font-size:1rem;font-weight:bolder" placeholder="Tìm kiếm cơ hội việc làm">
+                    <div class="content"></div>
+                
+            </div>
+            <!-- <div><i class="fa-solid fa-magnifying-glass" style="transform:rotate(90deg)"></i> Tìm kiếm cơ hội việc làm  </div> -->
+            <div><i class="fa-solid fa-magnifying-glass" style="transform:rotate(90deg)"></i>Lọc theo nghề nghiệp</div>
+            <div>Tìm kiếm</div>
+            <!-- div này có chức năng hiện submenu -->
+            <div id="locnc">Lọc nâng cao
+                <section class="fil">
+                    <ul class="loc flex">
+                        <li>Lọc nâng cao:</li>
+                        <li>Kinh nghiệm <sup>&#9662;</sup></li>
+                        <li>Mức lương <sup>&#9662;</sup></li>
+                        <li>Cấp bậc <sup>&#9662;</sup></li>
+                        <li>Trình độ <sup>&#9662;</sup></li>
+                        <li>Loại công việc <sup>&#9662;</sup></li>
+                        <li>Giới tính <sup>&#9662;</sup></li>
+                        <li>Xoá chọn</li>
+                        <li>Đóng</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+        <section >
+            
+        </section>
     </main>
+<script src="../main_js/duanlon_js.js"></script>
 </body>
 </html>

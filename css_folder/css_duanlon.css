@@ -1,6 +1,25 @@
 /* :root{
     --var(2)
 } */
+
+::-webkit-scrollbar {
+    width: 8px; /* Chiều rộng của thanh cuộn dọc */
+    height: 8px; /* Chiều cao của thanh cuộn ngang */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Màu sắc của phần tay cầm thanh cuộn */
+    border-radius: 10px; /* Góc bo tròn của tay cầm thanh cuộn */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Màu sắc của tay cầm thanh cuộn khi hover */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Màu nền của thanh cuộn */
+    border-radius: 10px; /* Góc bo tròn của thanh cuộn */
+}
 /* Thiết kế NAV */
 html{
     padding:0;
@@ -20,7 +39,8 @@ nav{
     margin-bottom: 5px;
     padding-bottom:20px;
     padding-top:20px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
+    background-color: #0cc0df;
     height: auto;
     border:1px solid rgba(rgb(125, 43, 43), rgb(21, 26, 21), rgb(2, 2, 135), 0.5);
     margin:0;
@@ -38,30 +58,46 @@ nav{
 }
 
 .flex.hdr {
-    color: #3a98a6;
+    /* color: #3a98a6; */
+    color:#0097b2;
     list-style-type: none;
     margin-top: 0;
     margin-bottom: 0;
     width: 85%;
     border-radius: 20px;
+
     background-color: white;
-    border: 1px solid rgb(5, 225, 156);
+    /* border: 1px solid rgb(5, 225, 156); */
+    border:1px solid rgb(55, 163, 190);
 }
 
 .hdr li:first-child {
     padding-right: 20px;
-    
+    color:#0097b2;
 }
 
 .hdr>li {
     padding: 10px;
-    border-right: 1px solid #06f1ca;
+    /* border-right: 1px solid #06f1ca; */
+    border-right: 1px solid rgb(29, 145, 181);
+    
+}
+.hdr li.it{
+    transition: background-color .8s;
+}
+.hdr li.it:hover{
+    background-color: cadetblue;
+    color:white;
+    box-shadow: 1px 2px 20px rgb(255, 255, 255);
+    border-radius: 5px;
 }
 
 .hdr>li:last-child {
     border: none;
 }
-
+.hdr li.it:hover .submenu{
+    color:black;
+}
 .mid {
     width: 70%;
 }
@@ -71,7 +107,9 @@ nav{
     padding-left: 10px;
     padding-top: 8px;
 }
-
+#tuyendung{
+    margin-top:5px;
+}
 .middle_hdr .mid_h:last-child li:last-child {
     padding-top: 0 !important;
 }
@@ -88,19 +126,195 @@ nav{
 .submenu {
     display: none;
     position: absolute;
-    margin: 0; 
+    margin: 0;
     list-style-type: none; 
     z-index: 1000; 
 }
-
-.sb:hover .mid_h.submenu{
-    display: block;
-    /* background-colr: red; */
-    border: 1px solid black;
+.mid_h.submenu li{
+    /* background-color: blue; */
+    width: 100%;
+    position: relative;
+    left:-50px;
+    top:5px;
+    margin-top:5px;
+    background-color: bisque;
+    border-radius:5px;
+    border:1px solid whitesmoke;
+    transition:  display .5s;
 }
+.sb:hover .mid_h.submenu{
+    display: block;}
 /* MAIN */
 section.line{
-    height:20px;
-    background-color: rgb(172, 242, 173);
+    height:60px;
+    background-color: #0097b2;
+}
+.subject{
+    box-shadow: 3px 5px 10px rgb(93, 84, 84);
+}
+.subject div:first-child{
+    position: relative;
+    background-color: #0cc0df;
+    border:none;
+}
+
+.subject .btn{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    /* border-top-left-radius:28px;
+    border-bottom-left-radius:28px; 
+    background-color:#0cc0df;  */
+    border:none;
+    position: absolute;
+    left:20px;
+    top:5px;
+}
+
+.subject input{
+    /* display: none; */
+    border:1px solid black;
+    height: 90%;
+    width: 80%;
+    left:60px;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.subject .btn:hover{
+    background-color: #848499;
+}
+.subject{
+    position: relative;
+    justify-content: space-between;
+    /* left:100px; */
+    margin:auto;
+    margin-top:10px;
+    width: 85%;
+    height: 90px;
+    border-radius: 30px;
+    background-color: #0cc0df;
+    z-index: 1;
+    color:#757575;
+}
+.subject>div:first-child{
+    width:33%;
+}
+.subject>div:nth-child(2){
+    width:25%;
+}
+.subject>div:nth-child(3){
+
+    width:25%;
+}
+.subject>div:nth-child(4){
+    width: 25%;
+}
+
+.subject{
+    box-sizing: border-box;
+}
+.subject>div{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border:1px solid black;
+    margin-right:30px;
+    height:45%;
+    margin-left:20px;
+    margin-top:20px;
+    background-color: white;
+    font-size:1.2rem;
+    text-align: center;
+    line-height: 220%;
+    transition: background-color .5s;
+}
+.subject>div:hover{
+    background-color: #0cc0df;
+    color:white;
+}
+
+.subject #locnc:hover .fil{
+    display: block !important;
+    box-shadow: 1px 4px 10px rgb(182, 181, 181);
+
+}
+
+.fil{
+    /* width: 150%; */
+    /* height: 80px; */
+    left:0;
+    width: 100%;
+    font-size: .9rem;
+    /* top:-10000px; */
+    display: none;
+    /* background-color: red; */
+    /* background-color: rgb(228, 227, 227); */
+    border: 1px solid whitesmoke;
+    margin: auto;
+    color:whitesmoke;
+    /* position: relative; */
+    position: absolute;
+    top:65px;
+    background-color: #fff;
+    /* background-color: black; */
+    color:black;
+    border-radius: 100px;
+    padding:5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top:0;
+    padding-top:0;
+    margin-bottom:0;
+    padding-bottom:0;
+}
+.loc{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    list-style-type: none;
+    justify-content: space-around;
+    position: relative;
+    line-height: 330%;
     
+}
+.loc li{
+    background-color: #08daff;
+    padding:0 15px;
+    transition: background-color .4s;
+}
+.loc li:hover{
+    background-color: rgb(15, 104, 124);
+    color:rgb(255, 255, 255);
+}
+.loc li:first-child{
+    background-color: white;
+    color:#0097b2;
+    /* text-transform: uppercase; */
+    font-weight: 900;
+}
+.loc li:nth-child(8){
+    background-color: white;
+    padding-right:0;
+    margin-right:0;
+    color:#0097b2;
+}
+.loc li:last-child{
+    padding-left:25px;
+    margin-left:0;
+    border-left:1px solid #0097b2;
+    background-color: white;
+}
+.content{
+    display: none;
+    border:1px solid black;
+    height:100px;
+    position: relative;
+    top:40px;
+    border-radius: 30px;
+    left:20px;
+    overflow: auto;
+    overflow-
+    background-color: white;
+    text-decoration: underline;
+    text-align: left;
+    color:black;
+}
+#tbx:hover .content{
+    display: block !important;
 }
