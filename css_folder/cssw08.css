@@ -1,0 +1,22 @@
+/* body {
+    text-align: center;
+    /* background-color: black; 
+}*/
+body {
+    background: url('../images/bg_img.jpg');
+}
+body:before{
+    background-image: url('../images/b5.jpg');
+    mix-blend-mode: screen;
+}
+/* 
+img {
+    cursor: pointer;
+    width: 300px;
+    filter: grayscale(100%);
+    transition: filter .5s;
+}
+
+img:hover {
+    filter: grayscale(0%)
+} */

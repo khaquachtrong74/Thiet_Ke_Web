@@ -1,0 +1,106 @@
+/* :root{
+    --var(2)
+} */
+/* Thiết kế NAV */
+html{
+    padding:0;
+    margin: 0;
+}
+body {
+    margin: 0; /* Loại bỏ margin mặc định của body */
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+}
+@font-face {
+    font-family: my_font;
+    src: url('../css_folder/Playwrite_HR/PlaywriteHR-VariableFont_wght.ttf');
+}
+nav{
+    margin-bottom: 5px;
+    padding-bottom:20px;
+    padding-top:20px;
+    background-color: aquamarine;
+    height: auto;
+    border:1px solid rgba(rgb(125, 43, 43), rgb(21, 26, 21), rgb(2, 2, 135), 0.5);
+    margin:0;
+    box-sizing: border-box;
+}
+.main_nav{
+    display: flex;
+    justify-content: center;
+}
+.icon{
+    padding-top:20px;
+}
+.flex {
+    display: flex;
+}
+
+.flex.hdr {
+    color: #3a98a6;
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 85%;
+    border-radius: 20px;
+    background-color: white;
+    border: 1px solid rgb(5, 225, 156);
+}
+
+.hdr li:first-child {
+    padding-right: 20px;
+    
+}
+
+.hdr>li {
+    padding: 10px;
+    border-right: 1px solid #06f1ca;
+}
+
+.hdr>li:last-child {
+    border: none;
+}
+
+.mid {
+    width: 70%;
+}
+
+.mid_h li {
+    padding-right: 20px;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+
+.middle_hdr .mid_h:last-child li:last-child {
+    padding-top: 0 !important;
+}
+
+.middle_hdr {
+    list-style-type: none;
+    padding: 5px;
+    justify-content: space-between;
+}
+/* sub menu */
+.sb{
+    position: relative;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    margin: 0; 
+    list-style-type: none; 
+    z-index: 1000; 
+}
+
+.sb:hover .mid_h.submenu{
+    display: block;
+    /* background-colr: red; */
+    border: 1px solid black;
+}
+/* MAIN */
+section.line{
+    height:20px;
+    background-color: rgb(172, 242, 173);
+    
+}
