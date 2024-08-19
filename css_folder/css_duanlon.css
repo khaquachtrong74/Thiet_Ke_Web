@@ -98,6 +98,10 @@ nav{
 .hdr li.it:hover .submenu{
     color:black;
 }
+.hdr a {
+    text-decoration:none;
+    color:#0097b2;
+}
 .mid {
     width: 70%;
 }
@@ -210,7 +214,9 @@ section.line{
 .subject>div:nth-child(4){
     width: 25%;
 }
-
+.subject>div{
+    border-radius: 15px;
+}
 .subject{
     box-sizing: border-box;
 }
@@ -303,18 +309,51 @@ section.line{
 .content{
     display: none;
     border:1px solid black;
-    height:100px;
+    height:210px;
     position: relative;
     top:40px;
     border-radius: 30px;
     left:20px;
     overflow: auto;
-    overflow-
+
     background-color: white;
     text-decoration: underline;
     text-align: left;
     color:black;
+
+}
+.content>p{
+    transition: border,background-color .3s;
+    text-shadow: 1px 3px 3px rgb(241, 241, 241);
+}
+.content>p:hover{
+    background-color: rgb(242, 242, 242);
+    border:1px solid black;
 }
 #tbx:hover .content{
     display: block !important;
+}
+
+/* Phần css cho thêm thông tin của các nghề nghiệp */
+.Information{
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+div.in4{
+    height: 400px;
+    width: 25%;
+    /* background-color: black; */
+    margin-right:10px;
+    margin-top:10px;
+    border:1px solid black;
+}
+div.in4>img{
+    width: 100%;
+    /* border:1px solid red; */
+}
+div.in4 img:hover{
+    transform: scale(1.2);
+    z-index: 1000;
+    border:1px solid rgb(190, 190, 190);
+    /* transform: rotate(30deg); */
 }
