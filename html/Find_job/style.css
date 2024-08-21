@@ -114,16 +114,19 @@ footer{
     
 }
 footer div.content{
-    height:70%;
+    height:90%;
+    position: relative;
 }
-footer div.content>h2{
-    margin-left:45px;
-}   
-footer div.content>ul>li{
+footer div.content ul{
+    right:30%;
+    position: relative;
+}
+footer div.content ul>li{
     list-style-type: none;
-    font-size: 1.2rem;
+    font-size: .8rem;
     font-weight: 600;
     padding:5px;
+    width:100%;
 }
 
 footer .favicon{
@@ -131,29 +134,19 @@ footer .favicon{
     position: relative;
     box-sizing: border-box;
 }
-footer div.subcontent>div:first-child{
-    width: 80%;
+footer div.content div.flex img{
+    border-radius: 10px;
 }
-footer div.subcontent>div:last-child{
-    padding-right:20px;
-}
-footer div.subcontent>div>img{
-    padding:0;
-    margin:0;
-    border-radius: 25%;
-}
-footer div.subcontent>div>img:first-child{
+footer div.content div.flex img:first-child{
     border-radius: 50%;
 }
-footer div.subcontent>div>img:nth-child(2){
-    border-radius: 100%;
-}
-footer div.subcontent>div>img:hover{
-    transform: scale(1.1);
-    transition: all .3s;
+footer div.content div.flex img:hover{
+    transform: scale(1.2);
+    transition: all .5s;
     box-shadow: 1px 2px 5px black;
 }
 footer>div:last-child{
+    position: relative;
     text-align: center;
     font-size: 1.1rem;
 }
