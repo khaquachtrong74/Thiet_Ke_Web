@@ -4,48 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Find_job/style.css">
-    <!-- <link rel="icon" href="../../images/5.png" type="imags/x-icon"> -->
+    <link rel="stylesheet" href="../Find_job/css_fd/style.css">
     <link href="../../images/4.png" rel="shortcut icon" />
+    
     <title>Find Job</title>
 </head>
 
 <body>
-    <nav>
-        <ul class="flex">
-            <li>
-                <a href="#" style="text-align:center; width:40%">
-                    <img src="../../images/4.png" style="border-radius:10px;" alt="favicon">
-                </a>
-            </li>
-            <li class="flex">
-                <p>Đánh giá công ty</p>
-                <p>Cẩm nang làm việc</p>
-                <p>Mẫu CV tham khảo</p>
-            </li>
-            <li></li>
-            <li class="flex">
+    <span id="true"></span>
+    <nav class="flex">
+        <div class="contain">
+            <a href="http://127.0.0.1:5500/html/Find_job/index.html#" style="text-align:center; width:40%">
+                <img src="../../images/4.png" style="border-radius:10px;" alt="favicon">
+            </a>
+        </div>
+        <div class="contain flex">
+            <p class="danhgiacongty"> <a href="http://127.0.0.1:5500/html/Find_job/danhgiacongty.html">Đánh giá công
+                    ty</a></p>
+            <!-- <a href="http://127.0.0.1:5500/html/Find_job/danhgiacongty.html">Đánh giá công ty</a> -->
+            <p>Cẩm nang làm việc</p>
+            <p><a href="http://127.0.0.1:5500/html/Find_job/BaiTapLon.html">Mẫu CV tham khảo</a></p>
+        </div>
+        <div class="contain flex">
+            <div id='dangky'>
                 <p>Đăng ký</p>
+                <div class="dangky">
+                    <div id="dk">
+                        <div class="block">
+                            <h2>Đăng ký đi thằng nhóc</h2>
+                            <form action="/submit" method="POST">
+                                <div>
+                                    <label for="email">Email:</label>
+                                    <input type="email" name="email" id="email" placeholder="Nhập email của bạn"
+                                        required>
+                                </div>
+                                <div>
+                                    <label for="username">Tên người dùng:</label>
+                                    <input type="text" name="username" id="username" placeholder="Nhập tên người dùng"
+                                        required>
+                                </div>
+                                <div>
+                                    <label for="password">Mật khẩu người dùng:</label>
+                                    <input type="password" name="password" id="password"
+                                        placeholder="Nhập mật khẩu người dùng" required>
+
+                                </div>
+                                <div>
+                                    <label for="confirm-password">Xác nhận lại mật khẩu:</label>
+                                    <input type="password" id="confirm-password" name="confirm-password"
+                                        placeholder="Xác thực lại mật khẩu" required>
+                                </div>
+                                <div>
+                                    <label for="captcha">Mã Captcha:</label>
+                                    <input type="text" id="captcha" name="captcha" placeholder="Nhập mã captcha"
+                                        required>
+                                </div>
+                                <div class="flex">
+                                    <input type="checkbox" id="xacnhan" name="xacnhan" required>
+                                    <label for="xacnhan">Tôi xác nhận đã đọc toàn bộ về điều khoản và chấp nhận đăng ký
+                                        dưới mọi hình thức.
+                                    </label>
+                                </div>
+                            </form>
+                            <div class="chot"></div>
+                            <button class="x-button">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dangnhap">
                 <p>Đăng nhập</p>
-                <p>Nhà tuyển dụng</p>
-            </li>
-        </ul>
+            </div>
+            <p>Nhà tuyển dụng</p>
+        </div>
     </nav>
-    <div style="width:100%;height:100px;background-color:black;"></div>
-    <!-- <main>
+    <div style="width:100%;height:100px;"></div>
+    <main class="flex">
         <div id="broadcast">
             <div>
-                <input type="text" id="search">
-                <input type="search" id="loc">
+                <input placeholder="Tìm kiếm theo công việc" type="search" id="search">
+                <input placeholder="Tìm kiếm theo khu vực" type="search" id="loc">
             </div>
             <button class="custom-button"></button>
-            <button class="custom-button"></button> 
-            <button class="custom-button"></button> 
+            <button class="custom-button"></button>
+            <button class="custom-button"></button>
         </div>
-    </main> -->
-
+        <div class="sub"></div>
+    </main>
     <footer>
-        <div class="content">
+        <div class="ct">
             <div class="flex">
                 <div style="width:30%;">
                     <h2>CONTACT WITH US</h2>
@@ -82,20 +130,42 @@
                 </div>
                 <div>
                     <ul>
-                        <li><h3>DÀNH CHO NHÀ TUYỂN DỤNG</h3></li>
+                        <li>
+                            <h3>DÀNH CHO NHÀ TUYỂN DỤNG</h3>
+                        </li>
                         <li>Dành cho nhà tuyển dụng</li>
                         <li>ES Platform</li>
                         <li>Manager</li>
                     </ul>
                 </div>
-                
-                
+
+
             </div>
         </div>
-        
         <div>&copy; Trang này được làm bởi DetK3369 và Dino</div>
     </footer>
-    <script src="func.js"></script>
+    
+    <script src="../Find_job/js_fd/func.js"></script>
 </body>
 
 </html>
+<!-- 
+<ul class="flex">
+    <li>
+        <a href="#" style="text-align:center; width:40%">
+            <img src="../../images/4.png" style="border-radius:10px;" alt="favicon">
+            
+        </a>
+    </li>
+    <li class="flex">
+        <p>Đánh giá công ty</p>
+        <p>Cẩm nang làm việc</p>
+        <p>Mẫu CV tham khảo</p>
+    </li>
+    <li></li>
+    <li class="flex">
+        <p>Đăng ký</p>
+        <p>Đăng nhập</p>
+        <p>Nhà tuyển dụng</p>
+    </li>
+</ul> -->

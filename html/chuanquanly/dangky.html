@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Find_job/css_fd/style.css">
+    <link href="../../images/4.png" rel="shortcut icon" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="dangky">
+        <div id="nen">
+            <div class="block">
+                <button class="x-button">
+                </button>
+            </div>       
+        </div>
+    </div>
+    <script>
+        let dangkyEl = document.getElementsByClassName('dangky');
+        for (let i = 0; i < dangkyEl.length; i++) {
+            dangkyEl[i].addEventListener('click', function () {
+                let div = document.createElement('div');
+                let x = document.createElement('button');
+                x.classList.add('x-button');
+                let k = document.createElement('div');
+                k.setAttribute('style', 'position: fixed; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.5);display:flex; justify-content:center; align-items:center;z-index:20;');
+                k.id = 'nen';
+                div.style.width = '50%';
+                div.classList.add('block');
+                if (document.body.querySelector('#nen')) { return; }
+                div.appendChild(x);
+                k.appendChild(div);
+                this.appendChild(k);
+                x.addEventListener('click', function () {
+                    event.stopPropagation()// tránh đụng độ với sự kiện click của thằng trên
+                    div.parentElement.removeChild(div); // Xóa div d khỏi parent của nó
+                    dangkyEl[i].removeChild(k);
+                });
+            })
+        }
+    </script>
+</body>
+
+</html>

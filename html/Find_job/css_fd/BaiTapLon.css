@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-ul {
+div#image-container>ul {
     display: flex;
     justify-content: space-around;
     width: 90%;
@@ -14,7 +14,7 @@ ul {
     flex-wrap: wrap; /* Đảm bảo các mục không bị tràn ra ngoài */
 }
 
-li {
+div#image-container>ul>li {
     width: 28%;
     border: 2px solid silver;
     border-radius: 10px;
@@ -26,7 +26,7 @@ li {
     cursor: pointer;
 }
 
-li:hover {
+div#image-container li:hover {
     transform: translateY(-10px); /* Nổi lên khi hover */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng khi hover */
 }
