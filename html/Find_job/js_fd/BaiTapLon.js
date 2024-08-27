@@ -56,3 +56,4 @@ function applyChanges() {
 document.addEventListener('DOMContentLoaded', () => {
     filterImages('all');
 });
+
