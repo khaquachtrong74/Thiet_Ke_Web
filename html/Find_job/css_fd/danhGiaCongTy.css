@@ -130,6 +130,8 @@ main#dgct section#danhgia div#bieudo{
 main#dgct section#danhgia div#bieudo p {
     font-size: 24px;
     transition: box-shadow .6s;
+    box-sizing: border-box;
+    padding:20px;
 }
 main#dgct section#danhgia div#bieudo p:hover{
     /* border-right:1px solid black; */
