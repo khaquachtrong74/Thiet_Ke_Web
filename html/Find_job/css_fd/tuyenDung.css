@@ -74,7 +74,6 @@ main#nhaTuyenDung div#baiViet input {
 
 main#nhaTuyenDung div#hien {
     flex: 1;
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
