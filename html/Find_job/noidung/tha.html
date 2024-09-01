@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Image</title>
+    <style>
+        #dropZone {
+            width: 300px;
+            height: 200px;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            color: #999;
+            margin: 50px auto;
+        }
+
+        #dropZone.hover {
+            border-color: #333;
+            color: #333;
+        }
+
+        #imagePreview {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #imagePreview img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dropZone">Thả ảnh vào đây</div>
+    <div id="imagePreview"></div>
+
+    <script>document.addEventListener("DOMContentLoaded", function () {
+            const dropZone = document.getElementById('dropZone');
+            const imagePreview = document.getElementById('imagePreview');
+
+            dropZone.addEventListener('dragover', function (event) {
+                event.preventDefault();
+                dropZone.classList.add('hover');
+                dropZone.textContent = 'Thả ảnh vào đây';
+            });
+
+            dropZone.addEventListener('dragleave', function () {
+                dropZone.classList.remove('hover');
+                dropZone.textContent = 'Thả ảnh vào đây';
+            });
+
+            dropZone.addEventListener('drop', function (event) {
+                event.preventDefault();
+                dropZone.classList.remove('hover');
+                const files = event.dataTransfer.files;
+
+                if (files.length > 0) {
+                    const file = files[0];
+                    if (file.type.startsWith('image/')) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            const img = document.createElement('img');
+                            img.src = e.target.result;
+                            imagePreview.innerHTML = '';
+                            imagePreview.appendChild(img);
+                        }
+                        reader.readAsDataURL(file);
+                    } else {
+                        alert('Vui lòng thả một file ảnh!');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

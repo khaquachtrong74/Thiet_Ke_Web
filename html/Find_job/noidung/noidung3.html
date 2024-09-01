@@ -1,0 +1,190 @@
+<main id="cv">
+    <!-- Nút Lọc -->
+    <div class="filter-buttons">
+        <button onclick="filterImages('all')" id="all-button" class="active">Tất Cả Mẫu CV</button>
+        <button onclick="filterImages('simple')" id="simple-button">Mẫu CV Đơn Giản</button>
+        <button onclick="filterImages('modern')" id="modern-button">Mẫu CV Hiện Đại</button>
+    </div>
+    <!-- Danh Sách CV -->
+    <div id="image-container">
+        <ul class="image-list simple">
+            <li data-link="https://www.canva.com/design/DAGOpVsSA4w/Ck8epOcCH2XnNl4g_gVjkg/edit" onclick="openModal('../../images/simpleCV (1).png', this.getAttribute('data-link'))"><img src="../../images/simpleCV (1).png" alt="Đơn giản 1"></li>
+            <li data-link="https://www.canva.com/design/DAGOpaNS7C8/wuhXTzjPMp3tix9x-OKbJw/edit" onclick="openModal('../../images/simpleCV (2).png', this.getAttribute('data-link'))"><img src="../../images/simpleCV (2).png" alt="Đơn giản 2"></li>
+            <li data-link="https://www.canva.com/design/DAGOpTnmfJk/SOIIDd6d2lwOYk91hO_5Aw/edit" onclick="openModal('../../images/simpleCV (3).png', this.getAttribute('data-link'))"><img src="../../images/simpleCV (3).png" alt="Đơn giản 3"></li>
+        </ul>
+        <ul class="image-list simple">
+            <li data-link="https://www.canva.com/design/DAGOpbzpGlQ/6Ls02t4LAJI31-48oT5I-A/edit" onclick="openModal('../../images/simpleCV (4).png', this.getAttribute('data-link'))"><img src="../../images/simpleCV (4).png" alt="Đơn giản 4"></li>
+            <li data-link="https://www.canva.com/design/DAGOpqCXKSI/8gZc7y_21ZgZ9Et4BfK7Rw/edit" onclick="openModal('../../images/simpleCV (5).png', this.getAttribute('data-link'))"><img src="../../images/simpleCV (5).png" alt="Đơn giản 5"></li>
+            <li data-link="https://www.canva.com/design/DAGOpgPHzas/bDT7G3n0CsEyEUf-wWlJCw/edit" onclick="openModal('../../images/simpleCV (6).png', this.getAttribute('data-link'))"><img src="../../images/simpleCV (6).png" alt="Đơn giản 6"></li>
+        </ul>
+        <ul class="image-list simple">
+            <li data-link="https://www.canva.com/design/DAGOsP7ChY4/qQ3fTBUW8h2L5STepcRP9g/edit" onclick="openModal('../../images/simpleCV (7).png', this.getAttribute('data-link'))"><img src="../../images/simpleCV (7).png" alt="Đơn giản 7"></li>
+            <li data-link="https://www.canva.com/design/DAGOsOzouJ4/Q2SWK1IP4CFaD0KJdW9r5w/edit" onclick="openModal('../../images/simpleCV (8).png', this.getAttribute('data-link'))"><img src="../../images/simpleCV (8).png" alt="Đơn giản 8"></li>
+            <li data-link="https://www.canva.com/design/DAGOpWNUrs8/I-Q4atzpeD7B-a1ItqrPMQ/edit" onclick="openModal('../../images/simpleCV (9).png', this.getAttribute('data-link'))"><img src="../../images/simpleCV (9).png" alt="Đơn giản 9"></li>
+        </ul>
+        <ul class="image-list simple">
+            <li data-link="https://www.canva.com/design/DAGOsHkBkCY/k66VYxY2NrWP_UoFOQDfzw/edit" onclick="openModal('../../images/simpleCV (10).png', this.getAttribute('data-link'))"><img src="../../images/simpleCV (10).png" alt="Đơn giản 10"></li>
+            <li data-link="https://www.canva.com/design/DAGOsD2gWvU/JZANlCpEGOkLlmj-N2c03A/edit" onclick="openModal('../../images/simpleCV (11).png', this.getAttribute('data-link'))"><img src="../../images/simpleCV (11).png" alt="Đơn giản 11"></li>
+            <li data-link="https://www.canva.com/design/DAGOsATXRMY/ifvMCu4wtHy9pCvgK7Liwg/edit" onclick="openModal('../../images/simpleCV (12).png', this.getAttribute('data-link'))"><img src="../../images/simpleCV (12).png" alt="Đơn giản 12"></li>
+        </ul>
+        <ul class="image-list modern">
+            <li data-link="https://www.canva.com/design/DAGOpipIZ_4/THzfj5q1OyBYcumgO3Np-Q/edit" onclick="openModal('../../images/mordenCV (1).png', this.getAttribute('data-link'))"><img src="../../images/mordenCV (1).png" alt="Hiện đại 1"></li>
+            <li data-link="https://www.canva.com/design/DAGOphjxV4M/M1jHrFKoKwNbpia9Vo0f0w/edit" onclick="openModal('../../images/mordenCV (2).png', this.getAttribute('data-link'))"><img src="../../images/mordenCV (2).png" alt="Hiện đại 2"></li>
+            <li data-link="https://www.canva.com/design/DAGOplVc7w8/agNXVYDQ8DjXzZjuaAfTfA/edit" onclick="openModal('../../images/mordenCV (3).png', this.getAttribute('data-link'))"><img src="../../images/mordenCV (3).png" alt="Hiện đại 3"></li>
+        </ul>
+        <ul class="image-list modern">
+            <li data-link="https://www.canva.com/design/DAGOphcgJOU/9fTB-F8KK-FaAXJxSRBc7Q/edit" onclick="openModal('../../images/mordenCV (4).png', this.getAttribute('data-link'))"><img src="../../images/mordenCV (4).png" alt="Hiện đại 4"></li>
+            <li data-link="https://www.canva.com/design/DAGOptJwlsQ/SGLEjSWEtsY37rQ-bKTGBQ/edit" onclick="openModal('../../images/mordenCV (5).png', this.getAttribute('data-link'))"><img src="../../images/mordenCV (5).png" alt="Hiện đại 5"></li>
+            <li data-link="https://www.canva.com/design/DAGOpt9Hu7c/BpzZ3xQ1NapngCfBFGhQRw/edit" onclick="openModal('../../images/mordenCV (6).png', this.getAttribute('data-link'))"><img src="../../images/mordenCV (6).png" alt="Hiện đại 6"></li>
+        </ul>
+        <ul class="image-list modern">
+            <li data-link="https://www.canva.com/design/DAGOptbTOhs/l0t2lG_8tEEo3vEyMdMllg/edit" onclick="openModal('../../images/mordenCV (7).png', this.getAttribute('data-link'))"><img src="../../images/mordenCV (7).png" alt="Hiện đại 7"></li>
+            <li data-link="https://www.canva.com/design/DAGOpk-7f3I/94r7C85yqEMdkeO7gkkgOQ/edit" onclick="openModal('../../images/mordenCV (8).png', this.getAttribute('data-link'))"><img src="../../images/mordenCV (8).png" alt="Hiện đại 8"></li>
+            <li data-link="https://www.canva.com/design/DAGOpkYVJtk/cTGC3zg7K3BEmkbxFtvJeA/edit" onclick="openModal('../../images/mordenCV (9).png', this.getAttribute('data-link'))"><img src="../../images/mordenCV (9).png" alt="Hiện đại 9"></li>
+        </ul>
+        <ul class="image-list modern">
+            <li data-link="https://www.canva.com/design/DAGOpqJGypo/vnAq89tuHTPOSXoxvGg_SQ/edit" onclick="openModal('../../images/mordenCV (10).png', this.getAttribute('data-link'))"><img src="../../images/mordenCV (10).png" alt="Hiện đại 10"></li>
+            <li data-link="https://www.canva.com/design/DAGOphdDUP4/RbqhnR5E4Nlfqbuy-yygbA/edit" onclick="openModal('../../images/mordenCV (11).png', this.getAttribute('data-link'))"><img src="../../images/mordenCV (11).png" alt="Hiện đại 11"></li>
+            <li data-link="https://www.canva.com/design/DAGOphdDUP4/RbqhnR5E4Nlfqbuy-yygbA/edit" onclick="openModal('../../images/mordenCV (12).png', this.getAttribute('data-link'))"><img src="../../images/mordenCV (12).png" alt="Hiện đại 12"></li>
+        </ul>
+    </div>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Selected CV">
+            <div class="modal-controls">
+                <p>Khi bạn chọn <strong>'Sử dụng mẫu này'</strong>, bạn sẽ được chuyển đến <a onclick="applyChanges()">Canva</a> để chỉnh sửa mẫu CV.</p>
+                <button onclick="applyChanges()">Sử dụng mẫu này</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <ul class="canva-lists">
+            <li class="canva-items">
+                <p class="main-text">
+                    Bạn cần những gợi ý để bắt đầu một CV mới?
+                </p>
+                <p class="sub-text">
+                    Cùng khám phá các mẫu CV và thiết kế riêng của bạn để nổi bật trong mắt nhà tuyển dụng.
+                </p>
+                <a href="https://www.canva.com/templates/?query=CV" target="_blank"><button onclick="applyChanges()">Xem các mẫu CV</button></a>
+            </li>
+            <li class="canva-items">
+                <img src="../../images/canva-list.png" alt="canva-list">
+            </li>
+        </ul>
+        <ul class="free-CV">
+            <li class="free-CV-items">
+                <img src="../../images/free-CV.png" alt="free-CV">
+            </li>
+            <li class="free-CV-items">
+                <p class="main-text">
+                    Mẫu CV xin việc miễn phí: Những lợi ích và cách sử dụng hiệu quả
+                </p>
+                <p class="sub-text">
+                    Khi tìm kiếm việc làm, nhiều người thường bị choáng ngợp bởi số lượng mẫu CV có sẵn trên mạng và sự đa dạng của chúng. Bài viết này sẽ giúp bạn hiểu rõ hơn về các mẫu CV miễn phí, cùng với những lợi ích của việc sử dụng chúng và cách chọn lựa mẫu phù hợp nhất với nhu cầu của bạn. Hãy chuẩn bị để khám phá những thông tin hữu ích ngay sau đây!
+                </p>
+            </li>
+        </ul>
+        <ul class="mean-is-CV">
+            <li class="mean-is-CV-items">
+                <p class="main-text">
+                    CV là gì và mẫu CV xin việc là gì?
+                </p>
+                <p class="sub-text">
+                    CV, viết tắt của "Curriculum Vitae", là bản tóm tắt ngắn gọn về trình độ học vấn, bằng cấp, và kinh nghiệm làm việc của một cá nhân. Đây là tài liệu thường được đính kèm với thư xin việc để giới thiệu về bản thân cho nhà tuyển dụng. Mẫu CV là tài liệu cung cấp sẵn cấu trúc và định dạng để bạn dễ dàng tạo CV của mình. Việc sử dụng mẫu CV giúp quá trình viết trở nên dễ dàng hơn và đảm bảo tính chuyên nghiệp cần thiết. Có nhiều loại mẫu CV khác nhau, và bạn nên chọn một mẫu phù hợp với vị trí công việc mà bạn đang ứng tuyển.
+                </p>
+            </li>
+        </ul>
+        <ul class="pay-attention-CV">
+            <p class="main-text">
+                Một số lưu ý khi viết CV dựa trên CV mẫu
+            </p>
+            <p class="sub-text">
+                Dù là đã có mẫu CV sẵn nhưng bạn vẫn nên đọc qua một số lưu ý khi viết CV để đạt được hiệu quả tối ưu nhé.
+            </p>
+            <li class="pay-attention-CV-items-1">
+                <img src="../../images/mic.png">
+                <p class="main-text">
+                    Sử dụng ngôn ngữ chủ động
+                </p>
+                <p class="sub-text">
+                    Khi nói về kinh nghiệm làm việc trước đây, hãy sử dụng các động từ mạnh như “Đã đạt được”, “Đã kiếm được” và “Hoàn thành”. Chẳng hạn như Vượt doanh số bán hàng hơn 15%.
+                </p>
+            </li>
+            <li class="pay-attention-CV-items-2">
+                <img src="../../images/star.png">
+                <p class="main-text">
+                    Tạo điểm nhấn
+                </p>
+                <p class="sub-text">
+                    Nhà tuyển dụng thường có rất nhiều hồ sơ xin việc. Vì vậy, bạn chỉ có khoảng 2 phút để thu hút sự chú ý của họ. Có một số cách để làm điều này như: Đưa các trải nghiệm phù hợp nhất lên đầu, đừng lo lắng về thời gian. In đậm những phần quan trọng.
+                </p>
+            </li>
+            <li class="pay-attention-CV-items-3">
+                <img src="../../images/achievement.png">
+                <p class="main-text">
+                    Sử dụng các con số và thành tíchSử dụng các con số và thành tích
+                </p>
+                <p class="sub-text">
+                    Bạn đã bao giờ nghe đến thuật ngữ “Một bức ảnh có giá trị bằng cả ngàn lời nói” chưa? Những con số cũng đáng giá như một ngàn từ trên CV xin việc. Ví dụ mà bạn có thể tham khảo về điều này như “Luôn hoàn thành vượt mức doanh số bán hàng 10%”, “Huy động được hơn 200 triệu đồng cho chiến dịch gây quỹ ABC”…
+                </p>
+            </li>
+            <li class="pay-attention-CV-items-4">
+                <img src="../../images/color.png">
+                <p class="main-text">
+                    Thêm vào các từ khóa “khớp” với mô tả công việc
+                </p>
+                <p class="sub-text">
+                    Bạn có thấy mô tả công việc thường sẽ có rất nhiều từ thông dụng hoặc từ khóa về các kỹ năng hoặc yêu cầu phần mềm khác nhau không? Nhà tuyển dụng sẽ lướt qua CV để xem bạn có “khớp” với bất kỳ từ khóa nào trong số đó hay không. Thế nên đừng quên thêm vào CV các từ khóa mà bạn có ở các phần như kỹ năng hay kinh nghiệm làm việc.
+                </p>
+            </li>
+        </ul>
+        <ul class="mail-CV">
+            <p class="main-text">
+                Gợi ý về cách gởi CV qua mail đúng chuẩn
+            </p>
+            <p class="sub-text">
+                Tham khảo các mẫu CV xin việc, tạo CV cho phù hợp với phong cách của bạn và bước cuối cùng là gởi CV qua mail của nhà tuyển dụng. Dưới đây là hướng dẫn nhanh về cách gởi CV qua mail một cách chuyên nghiệp.
+            </p>
+            <li class="mail-items">
+                <p class="main-num">
+                    01 Dòng tiêu đề
+                </p>
+                <p class="sub-text">
+                    Hãy nói rõ bạn đang ứng tuyển vào vị trí nào bằng cách nhập tên họ cùng với chức danh và lĩnh vực công việc ở dòng tiêu đề, ví dụ như: Nguyễn Văn A - Ứng tuyển vị trí Nhân viên kinh doanh.
+                </p>
+            </li>
+            <li class="mail-items">
+                <p class="main-num">
+                    02 Nội dung email
+                </p>
+                <p class="sub-text">
+                    Đừng quên chào hỏi nhà tuyển dụng. Một câu chào đơn giản như Dear anh/chị…, Kính chào anh/chị… là đủ. Sau đó, bắt đầu email bằng cụm từ chẳng hạn như “Tôi gửi email này để ứng tuyển vào [chức danh công việc] được đăng trên [tranng web/phương tiện truyền thông xã hội]. Điều quan trọng là không nên sao chép thư xin việc của bạn vào email. Sử dụng phông chữ đơn giản (ví dụ như Arial hoặc Calibri 11) và bỏ qua tất cả các màu sắc đặc biệt và định dạng lạ mắt. Kết thúc phần nội dung với lời chào “Trân trọng”.
+                </p>
+            </li>
+            <li class="mail-items">
+                <p class="main-num">
+                    03 Kết thúc email
+                </p>
+                <p class="sub-text">
+                    Email gửi CV nên kết thúc với thông tin liên hệ của bạn: họ và tên, địa chỉ email, số điện thoại. Bạn có thể bao gồm một liên kết (URL) đến hồ sơ LinkedIn của mình và các tài khoản mạng xã hội khác mà bạn sử dụng cho mục đích nghề nghiệp và kinh doanh.
+                </p>
+            </li>
+            <li class="mail-items">
+                <p class="main-num">
+                    04 Đính kèm CV xin việc
+                </p>
+                <p class="sub-text">
+                    Sử dụng tên và họ của bạn làm tên tệp. Bạn có thể gửi CV và thư xin việc của mình dưới dạng tài liệu Word hoặc ở định dạng PDF
+                </p>
+            </li>
+        </ul>
+        <ul class="focus">
+            <p>
+                Như mọi khi, đừng quên <strong>rà soát và chỉnh sửa</strong> trước khi nhấn sửa.
+            </p>
+        </ul>
+    </div>
+</main>

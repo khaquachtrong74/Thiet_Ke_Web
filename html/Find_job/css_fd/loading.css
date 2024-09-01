@@ -1,0 +1,91 @@
+
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 8px solid #5f5c5c;
+    border-top: 8px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    margin-bottom: 20px;
+}
+
+.loading-text {
+    display: flex;
+}
+
+.loading-text span {
+    opacity: 0;
+    animation: typing 1s forwards;
+}
+
+.loading-text span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loading-text span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-text span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.loading-text span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.loading-text span:nth-child(5) {
+    animation-delay: 0.88s;
+}
+
+.dots {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.dots span {
+    animation: blink 1s infinite step(1,
+            end);
+    opacity: 0;
+}
+
+.dots span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dots span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.dots span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes typing {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+}

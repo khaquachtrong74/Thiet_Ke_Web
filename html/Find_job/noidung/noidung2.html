@@ -1,0 +1,171 @@
+<head>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+</head>
+<div id="list">
+    <i class="fa-solid fa-list" id="list_icon"></i>
+    <div> <a href="#trangchu1"><i class="fa-solid fa-house"></i>
+            <p id="pTrangChur">Trang Chủ</p>
+        </a>
+    </div>
+    <div><a href="#danhgia1"><i class="fa-solid fa-industry"></i>
+            <p id="pDanhGia">Đánh giá tổng quan</p>
+        </a>
+    </div>
+    <div><a href="#coHoi1"><i class="fa-solid fa-cubes"></i>
+            <p id="pCoHoi">Cơ hội</p>
+        </a>
+    </div>
+    <div><a href="#nhanXet1"><i class="fa-solid fa-comment"></i>
+            <p id="pNhanXet">Nhận xét</p>
+        </a>
+    </div>
+
+
+
+</div>
+<main id="dgct">
+    <div class="canhGa"></div>
+
+    <h2 id="trangchu1">Trang Chủ</h2>
+    <div class="khoangtrang"></div>
+    <div class="khoangtrang"></div>
+
+    <section id="trangchu"></section>
+
+    <div class="line"></div>
+    <div class="khoangtrang"></div>
+
+    <h2 id="danhgia1">Nhìn chung</h2>
+
+    <section id="danhgia">
+        <div id="bieudo">
+            <div>
+                <h2>Xu hướng việc làm qua các năm.</h2>
+                <p> Nhìn chung, nhu cầu tuyển dụng đã có xu hướng gia tăng qua các năm, do sự mở rộng không ngừng của
+                    các doanh nghiệp tại các khu công nghiệp trọng điểm trên cả nước. Tuy nhiên, biểu đồ cũng cho thấy
+                    sự sụt giảm mạnh trong tỷ lệ tuyển dụng trong thời kỳ đại dịch Covid-19. Điều này chủ yếu là do các
+                    doanh nghiệp buộc phải cắt giảm nhân sự nhằm duy trì hoạt động của công ty và nhà máy trong bối cảnh
+                    khó khăn của đại dịch.
+                </p>
+            </div>
+            <canvas id="viecChart" style="margin:0;"></canvas>
+        </div>
+        <div id="bieudo">
+            <canvas id="tienChart"></canvas>
+            <h2>Thông qua biểu đồ này, doanh nghiệp và người lao động có thể có cái nhìn toàn diện hơn về thị trường
+                việc làm.</h2>
+
+        </div>
+        <div id="bieudo">
+            <div>
+                <h2>Mức độ tăng trưởng kinh tế của nước ta.</h2>
+                <p>Hiện nay, nước ta đang ghi nhận nhiều tín hiệu tích cực. Sau giai đoạn khó khăn do ảnh hưởng của đại
+                    dịch, nền kinh tế đã nhanh chóng phục hồi và tiếp tục phát triển mạnh mẽ. Các ngành công nghiệp chủ
+                    chốt, như sản xuất và xuất khẩu, đang trên đà tăng trưởng ấn tượng. Đồng thời, dòng vốn đầu tư nước
+                    ngoài và trong nước cũng ngày càng gia tăng, thúc đẩy sự mở rộng và phát triển của các khu công
+                    nghiệp trọng điểm. </p>
+            </div>
+            <canvas id="kinhTeChart"></canvas>
+        </div>
+    </section>
+    <h2 id="coHoi1"></h2>
+    <!-- <div class="khoangtrang"></div> -->
+
+    <div class="line" style="margin-bottom:50px;"></div>
+    <section id="coHoi">
+        <h2>Các vị trí việc làm nổi bật</h2>
+        <div id="noiDungCoHoi">
+
+            <div style="display: flex; flex:1; justify-content: space-around;">
+                <div>
+                    <ul>
+                        <li>Kỹ sư cầu đường</li>
+                        <li>Kỹ sư xây dựng</li>
+                        <li>Nhà thiết kế nội thất</li>
+                        <li>Thợ rèn</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Nghệ sĩ chơi đàn</li>
+                        <li>Xe ôm công nghệ</li>
+                        <li>Giáo viên dạy Toán</li>
+                        <li>Bảo vệ</li>
+                        <li>Nhà nghiên cứu</li>
+
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Nhân viên kế toán</li>
+                        <li>Nhân viên </li>
+                        <li>Thợ cài win dạo</li>
+                        <li>Nhân viên bảo trì thiết bị</li>
+                        <li>Thợ sửa xe</li>
+
+
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Chuyên viên kỹ thuật âm thanh</li>
+
+                        <li>Điều dưỡng</li>
+                        <li>Thợ bảo trì máy tự động</li>
+                        <li>Luật sư</li>
+                        <li>Nhân viên tư vấn chăm sóc khách hàng</li>
+
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Quản trị nhân sự</li>
+                        <li>Quản trị viên mạng</li>
+                        <li>Quản lý chi nhánh</li>
+                        <li>Công tác xã hội</li>
+                        <li>Bác sĩ </li>
+
+
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Nhân sự thợ mộc</li>
+
+                        <li>Nhân viên phát triển dự án</li>
+                        <li>Nhân viên văn phòng</li>
+                        <li>Chuyên viên kỹ thuật </li>
+                        <li>Nhà báo tập sự</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Nhà nghiên cứu hoá chất</li>
+                        <li>Nhân viên Kế toán</li>
+                        <li>Thợ xây trung cấp</li>
+                        <li>Hacker</li>
+                        <li>Thợ làm bánh</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <div class="line" style="margin-top:50px;"></div>
+    <h2 id="nhanXet1">Nhận xét</h2>
+    <section id="nhanXet">
+        <div id="nguoidung">
+            <div id="comments">
+                <p>Người dùng 1: Trang web này rất hay, rất tuyệt đỉnh!</p>
+                <p>Người dùng 2: Trang web này đã giúp tôi tìm lại được việc sau hàng thập kỉ, tôi rất biết ơn đến người
+                    tạo ra trang web này :3</p>
+            </div>
+            <div id="inputComment" class="comment-box" contenteditable="true"
+                data-placeholder="Nhập bình luận của bạn ở đây..."></div>
+            <div id="commentButton"><button>Click me!</button></div>
+        </div>
+    </section>
+</main>

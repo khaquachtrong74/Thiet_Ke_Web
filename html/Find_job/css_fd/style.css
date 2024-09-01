@@ -1,123 +1,231 @@
-html, body {
+* {
+    /* x là cho padding hoặc margin */
+    --x: 20px;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+/* Thiết kế chung */
+html,
+body {
     height: 100%;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif
-}
-body{
+    font-family: Arial, Helvetica, sans-serif;
+    /* overflow: auto; Scrollbar only appears when needed */
     padding: 0;
     display: grid;
     grid-template-rows: 1fr auto;
 }
 
-input[type="search"] {
-    padding: 10px;
+@media (max-width: 768px) {
+    .column {
+        width: 100%;
+    }
 }
 
-input[type="search"]::placeholder {
-  color: #918f8f;
-  font-size: 17px;
-    
-}
-
-input[type="search"]:focus {
-  border-color: #b3b3b3;
-  outline: none; /*khi focus vào thì cái viền sẽ đè lên thay vì bị đẩy ra ngoài*/
-}
-
-.flex{
+div#noidung4 {
+    margin: 0;
+    height: 100vh;
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+}
+
+
+input[type="text"] {
+    padding: 5px;
+}
+
+input[type="text"]::placeholder {
+    color: #918f8f;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+input[type="text"]:focus {
+    border-color: #499eff;
+    outline: none;
+    /*khi focus vào thì cái viền sẽ đè lên thay vì bị đẩy ra ngoài*/
+}
+
+.flex {
+    display: flex;
     justify-content: space-around;
 }
+
+/* Thiết kế line chỗ đăng nhập */
+.line {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    flex-grow: 1;
+    margin: 0 10px;
+    margin-bottom: var(--x);
+}
+
+/* Thiết kế cho background dành cho các phần riêng trong hàm main */
+.bg {
+    /* background-color: #fff58c; */
+    padding: 40px;
+    margin-bottom: var(--x);
+}
+
 /* Thiết kế nav */
-nav{
-    border-bottom: 1px solid black;
+#navbar {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     position: fixed;
-    top:0;
-    left:0;
-    right:0;
-    background:white;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
     display: flex;
-    padding-top:10px;
-    padding-bottom: 10px;
-    border-left:2px solid black;
+    padding: 5px;
+    justify-content: space-between;
     border-bottom-left-radius: 10px;
-    box-shadow: 6px 2px 4px rgba(67, 63, 63, 0.937);
     z-index: 1000;
+    transition: all 0.8s;
 }
 
-nav div:first-child{
+/* class nhằm gắn vào nav khi cuộn */
+#navbar.scrolled {
+    border-left: 2px solid black;
+    border-bottom: 2px solid #003;
+    box-shadow: 6px 2px 4px rgba(67, 63, 63, 0.937);
+
+}
+
+#navbar div:first-child {
     text-align: start;
 }
-nav div.contain img{
-    width:10%; 
-    top:0;
-    left:0;
-    margin-top:5px;
-    transition: transform .5s; 
+
+#navbar div.contain img {
+    width: 50%;
+    top: 0;
+    left: 0;
+    margin-top: 5px;
+    transition: transform .5s;
     align-content: center;
     justify-self: center;
     align-items: center;
     text-align: center;
 }
-nav div.contain.flex{
-    padding:0;
-    margin:0;
+
+#navbar div.contain.flex {
+    padding: 0;
+    margin: 0;
 }
-nav img:hover{
+
+#navbar img:hover {
     transform: skew(16deg, -10deg);
-    
+
 }
-nav p {
+
+#navbar p {
     font-size: 1.1rem;
-    /* background-color: white; */
-    color:black;
-    margin:0;
+    color: black;
+    margin: 0;
     align-content: center;
-    padding:10px;
-    margin-right:10px;
+    padding: 10px;
+    margin-right: 10px;
     cursor: pointer;
+    transition: all .7s;
+
 }
-nav>div.flex>p:hover{
+
+#navbar>div.flex>p:hover {
     transform: scale(1.1);
+    background-color: #2c3e50;
+    color: white;
 }
-nav a{
+
+#navbar>div.flex div {
+    transition: all .7s;
+}
+
+#navbar a {
     color: black;
     text-decoration: none;
 }
-nav div#dangky{
+
+/* Css phần nav cho user đăng ký hoặc đăng nhập */
+#navbar div#dangky {
     align-self: center;
+    height: 50%;
 }
-nav div.dangky{
+
+#navbar div.dangky {
     display: none;
 }
-nav div.dangnhap{
+
+#navbar div.dangnhap {
     align-self: center;
 }
-/* user */
+
+#navbar div.dangnhap p {
+    height: 50%;
+}
+
+#navbar div#nguoidung {
+    align-self: center;
+    display: none;
+    margin: 0;
+    position: absolute;
+    top: 80px;
+    width: 150px;
+    height: 80px;
+    right: 16%;
+    background-color: #f7f7f7;
+}
+
+#navbar div#nguoidung p:hover {
+    transform: scale(1.1);
+    background-color: rgb(56, 56, 144);
+}
+
 .user {
-    height:30px;
-    border-radius:5px;
-    width:90%;
-    font-size:18px;
-    margin-bottom:10px;
-    margin-top:5px;
+    height: 30px;
+    border-radius: 5px;
+    width: 90%;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
-/* Thiết kế line chỗ đăng nhập */
-.line {
-    border:none; 
-    height:1px;
-    background-color: #ccc;
-    flex-grow:1;
-    margin: 0 10px;
+
+/* Thiết kế đăng ký */
+div.contain>div#nguoidung>div#dangky>div.dangky>div#dk>div.block div {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
 }
-/* Thiết kế nút */
+
+div.contain>div#nguoidung>div#dangky>div.dangky>div#dk>div.block div>input {
+    height: 30px;
+    border-radius: 10px;
+}
+
+/* Thiết kế chốt đăng ký/ đăng nhập */
+.chot {
+    height: 50px;
+    background-color: blueviolet;
+    color: white;
+    width: 100%;
+    border-radius: 100px;
+    font-size: 1.2rem;
+    align-content: center;
+}
+
+/* Thiết kế nút dành cho chạy quảng cáo*/
 .x-button {
     position: absolute;
-    top: -20px;
-    left:105%;
+    top: -var(--x);
+    left: 105%;
     width: 30px;
     height: 30px;
     background-color: transparent;
@@ -126,15 +234,16 @@ nav div.dangnhap{
     z-index: 31;
     background-image: url('../');
 }
+
 .x-button::before,
 .x-button::after {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 20px;
+    width: var(--x);
     height: 2px;
-    
+
     background-color: black;
 }
 
@@ -145,179 +254,629 @@ nav div.dangnhap{
 .x-button::after {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
+
 /* Thiết kế block chung */
-.block{
-    height:440px;
-    border-radius:30px;
-    width:25%;
+.block {
+    height: 440px;
+    border-radius: 30px;
+    width: 25%;
     box-sizing: border-box;
-    padding:10px;   
+    padding: 10px;
     background-color: aliceblue;
     position: absolute;
 }
 
-/* Thiết kế đăng ký */
-div.contain>div#dangky>div.dangky>div#dk>div.block div{
-    /* margin:10px; */
-    margin-top:5px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
+/* Thiết kế nền mờ */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    /* Cover 50% of the image */
+    height: 95%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    border-radius: 5px;
+    pointer-events: none;
 }
 
-div.contain>div#dangky>div.dangky>div#dk>div.block div>input{
-    height:30px;
-    border-radius:10px;
+.nen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
 }
-/* Thiết kế chốt đăng ký/ đăng nhập */
-.chot{
-    height:50px; background-color:blueviolet;color:white;width:100%;border-radius:100px;font-size:1.2rem;align-content: center;
-}
-/* Thiết kế nền mờ */
-.nen{
-    position: fixed; 
-    top:0; 
-    left:0; 
-    width:100%; 
-    height:100%; 
-    background-color: rgba(0,0,0,0.5);
-    display:flex; 
-    justify-content:center; 
-    align-items:center;
-    z-index:20;
-}
+
 /* Thiết kế main */
-.img{
-    background-image: url('../../images/b2.jpg');
-    width:100px;
-    height: 100px;
-    background-size: cover;
-    border-image: fill 0
-linear-gradient(#0003,#000);
+main {
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: var(--x);
 }
-div.img {
-    color:white;
+
+/* Chỉnh tất cả h trong main */
+
+main h2 {
+    margin-left: var(--x);
+}
+
+main h3 {
+    margin: var(--x);
+}
+
+/* Css cho phần chạy quảng cáo */
+
+main#homepage div#broadcast {
+    
+    flood-opacity: initial;
+    background-color: rgb(213, 240, 250);
+    margin-top: 50px;
+    padding: 0;
+    margin-bottom: 50p;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
     align-content: end;
 }
-
-main>div#broadcast{
-    width:60%;
-    margin-top: 25px;
-    margin-bottom:25px;
-    height: 500px;
-    border-radius: 10px;
-    background-color: rgb(213, 240, 250);
-    margin-left:50px;
-
+main#homepage div#broadcast button{
+    left:20%;
 }
-div#broadcast input#search{
-    position: relative;
-    font-size: 1.4rem;
-    width: 35%;
-    left:3%;
-    margin-top: 5%;
-    border-radius:10px;
-    font-weight: 600;
-}
-div#broadcast input#loc{
-    position: relative;
-    font-size: 1.4rem;
-    width: 32%;
-    left:10%;
-    border-radius: 10px;
-    font-weight: 600;
-}
-div#broadcast button:hover{
+main#homepage div#broadcast button:hover {
     background-color: #918f8f;
     transition: background-color .5s;
     transform: translate();
 }
-.custom-button {
+
+main#homepage .custom-button {
     display: inline-block;
-    padding: 10px;              /* Khoảng cách bên trong nút */
-    background-color: #ffffff;       /* Màu nền xanh lá */
+    padding: 10px;
+    /* Khoảng cách bên trong nút */
+    background-color: #ffffff;
+    /* Màu nền xanh lá */
     cursor: pointer;
-    color: white;                    /* Màu chữ */
-    font-weight: bold;               /* Chữ đậm */
-    border-radius: 30px;             /* Bo tròn góc */
-    text-align: center;              /* Canh giữa chữ */
-    text-decoration: none;           /* Xóa gạch chân mặc định */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+    color: white;
+    /* Màu chữ */
+    font-weight: bold;
+    /* Chữ đậm */
+    border-radius: 30px;
+    /* Bo tròn góc */
+    text-decoration: none;
+    /* Xóa gạch chân mặc định */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    /* Đổ bóng */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     transform: rotate(90deg);
-    height:20px;
-    position: relative;
-    top:400px;
+    
 }
 
-.custom-button:hover {
-    background-color: #f7f7f7;       /* Màu nền khi hover */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Tăng đổ bóng khi hover */
+/*Css cho phần Khám phá việc làm  */
+main div#khamphavieclam {
+    height: 450px;
+    display: flex;
+    /* margin:var(--x)*4; */
+    margin: 50px;
 }
-main{
-    flex:1;
-    /* margin:0; */
+
+main div#khampha {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 40%;
+    height: 180px;
+    position: relative;
+    background-color: antiquewhite;
+    border-radius: var(--x);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+main div#khampha div:first-child {
+    display: flex;
+}
+
+main div#khampha div:first-child img {
+    border-top-left-radius: var(--x);
+}
+
+main div#khampha div:first-child i {
+    transform: rotate(90deg);
+}
+
+main div#khampha div.line {
+    margin: 0;
+}
+
+main div#khamphavieclam div#vieclam {
+    display: flex;
+    flex: 3;
+}
+
+/* Phần hiện ra các việc làm _ bao gồm 2 set */
+main div#khamphavieclam div#vieclam .set {
+    flex: 1;
+    height: 100%;
+    box-sizing: border-box;
+    /* padding:5px; */
+}
+
+main div#khamphavieclam div#vieclam .set:first-child>div:last-child:hover {
+    box-shadow: -10px 5px 9px black;
+
+    transition: all .5s ease-out;
+}
+
+/* Hover cho set 1 */
+main div#khamphavieclam div#vieclam .set:first-child>div:first-child div#div1:hover {
+    transition: all .5s;
+    background-color: #2c3e50;
+    color: white;
+}
+
+main div#khamphavieclam div#vieclam .set:first-child>div:first-child div#div23>div:hover {
+    transition: all .5s;
+    background-color: #2c3e50;
+    color: white;
+}
+
+main div#khamphavieclam div#vieclam .set:first-child>div:last-child:hover {
+    transition: all .5s;
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Hover cho set 2 */
+main div#khamphavieclam div#vieclam .set:last-child>div:last-child div#div1:hover {
+    transition: all .5s;
+
+    background-color: #2c3e50;
+    color: white;
+}
+
+main div#khamphavieclam div#vieclam .set:last-child>div:last-child div#div23>div:hover {
+    background-color: #2c3e50;
+    color: white;
+    transition: all .5s;
+
+}
+
+main div#khamphavieclam div#vieclam .set:last-child>div:first-child:hover {
+    background-color: #2c3e50;
+    color: white;
+    transition: all .5s;
+
+}
+
+main div#khamphavieclam div#vieclam .set:last-child>div:first-child:hover {
+    box-shadow: 10px -5px 5px black;
+    transition: all .5s ease-out;
+}
+
+/* Việc làm ở set 1 */
+main div#khamphavieclam div#vieclam .set div#div1 {
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+}
+
+main div#khamphavieclam div#vieclam .set div#div123 {
+    height: 50%;
+    width: 100%;
+    /* margin-bottom: 5px; */
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+}
+
+main div#khamphavieclam div#vieclam .set div#div23 {
+    height: 100%;
+    width: 102%;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-.sub{
-    width:50%;
-    margin-top: 25px;
-    margin-bottom:25px;
-    margin-left:50px;
-    margin-right:50px;
+
+main div#khamphavieclam div#vieclam .set div#div2 {
+    width: 100%;
+    margin: 0;
+    height: 48%;
+    /* margin-bottom: 5px; */
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+main div#khamphavieclam div#vieclam .set div#div3 {
+    width: 100%;
+    height: 51%;
+
+}
+
+main div#khamphavieclam div#vieclam .set div#div4 {
+    width: 100%;
+    height: 50%;
+    border-top: 1px solid black;
+    /* border-bottom: 1px solid black; */
+    border-right: 1px solid black;
+
+}
+
+/* Việc làm set 2 */
+main div#khamphavieclam div#vieclam .set:last-child div#div4 {
+    margin: 0;
+    /* margin-bottom:5px; */
+    height: 25%;
+    position: relative;
+    border: none;
+    border-right: 1px solid black;
+}
+
+main div#khamphavieclam div#vieclam .set:last-child div#div123 {
+    height: 73%;
+    width: 100%;
+    /* margin-bottom: 5px; */
+    box-sizing: border-box;
+    display: flex;
+
+}
+
+main div#khamphavieclam div#vieclam .set:last-child div#div1 {
+    height: 103%;
+    width: 100%;
+    /* margin-right:5px; */
+    box-sizing: border-box;
+    border: none;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+}
+
+main div#khamphavieclam div#vieclam .set:last-child div#div2 {
+    height: 53%;
+
+    border: none;
+    border-top: 1px solid black;
+}
+
+main div#khamphavieclam div#vieclam .set:last-child div#div3 {
+    border: none;
+    height: 49.5%;
+    border-top: 1px solid black;
+}
+
+main div#khamphavieclam div#vieclam .set:last-child div#div23 {
+    height: 100%;
+    width: 100%;
+    /* margin-right:5px; */
+    box-sizing: border-box;
+    border: none;
+
+}
+
+/* Css cho phần các doanh nghiệp ở homepage */
+main div#doanhnghiep {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    margin: auto;
+    margin-bottom: var(--x);
+    align-items: center;
+}
+
+main div#doanhnghiep>div {
+    width: 10%;
+    position: relative;
+}
+
+main div#doanhnghiep img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+main div#doanhnghiep img:hover {
+    /* Tránh hiện tượng hư khung */
+    box-shadow: 5px 4px 10px 1px #000;
+    outline: 1px solid black;
+}
+
+main div#doanhnghiep .btn-doanhnghiep {
+    border: none;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    transition: all .8s;
+}
+
+main div#doanhnghiep .btn-doanhnghiep:hover {
+    border: 1px solid #499eff;
+}
+
+/* Css cho phần giới thiệu */
+main div.gioithieu_bg {
+    background-color: white;
+    display: flex;
+    box-sizing: border-box;
     height: 500px;
+}
+
+main div.gioithieu_bg>div#gioithieu_img {
+    background-image: url('../../../images/gioithieu.jpg');
+    width: 60%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+main div.gioithieu_bg>div#gioithieu_ {
+    width: 50%;
+    height: 95%;
+    margin-left: 10%;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+main div.gioithieu_bg>div#gioithieu_ h1 {
+    font-size: 1.7rem;
+}
+
+main div.gioithieu_bg>div#gioithieu_ p {
+    color: rgb(122, 122, 122);
+    font-weight: lighter;
+    font-size: 1.1rem;
+}
+
+/* Css cho phần job ở trang homepage */
+main div.job {
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+main div.job>div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+main div.job img {
+    width: 50%;
     border-radius: 10px;
-    /* background-color: rgb(213, 240, 250); */
-    background-image: url('../../images/download.jpg');
-    background-size:cover;
+}
+
+main div.job>div div p {
+    position: relative;
+    text-transform: capitalize;
+    padding-left: 5%;
+    margin: 0;
+}
+
+main div.job>div div {
+    width: 32%;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+    transition: all .8s;
+    display: flex;
+
+}
+
+main div.job>div div:hover {
+    scale: 1.05;
+    box-shadow: 1px 4px 10px;
+}
+
+/* Hình nền trước footer  */
+main div#bg_footer {
+    width: 100%;
+    height: 300px;
+    background-image: url('../../../images/bg_footer.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main div#bg_footer div#nhatuyendung {
+    position: relative;
+    color: white;
+    top: 20%;
+}
+
+main div#bg_footer div#nhatuyendung span {
+    font-size: 1.3rem;
+    padding: 8px;
+    margin: var(--x);
+    background-color: rgb(91, 246, 132);
+    border-radius: 5px;
+    outline: solid rgb(150, 255, 255);
+    position: relative;
+}
+
+main div#bg_footer div#nhatuyendung span>a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Css cho phần đánh giá */
+main div#danhgia {
+    height: 400px;
+    background-color: white;
+}
+
+main div#danhgia div#noidung {
+    background-color: rgb(255, 208, 153);
+    width: 60%;
+    height: 100%;
+    border-radius: var(--x);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+main div#danhgia div#noidung div {
+    width: 30%;
+    height: 100%;
+    /* background-color: blue; */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+main div#danhgia div#noidung div div:first-child {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(218, 36, 36, 0.392);
+    position: relative;
+    z-index: 23;
+    margin: auto;
+    border-radius: 5px;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    margin-bottom: 20px;
+}
+
+main div#danhgia div#noidung div div:first-child div {
+    /* border-radius: 999px; */
+    height: 10%;
+    /* background-image: url('../../../images/user.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: height .5s;
+}
+
+main div#danhgia div#noidung div div:first-child div:hover {
+    height: 100%;
+}
+
+
+main div#danhgia div#noidung div div:last-child {
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+    margin: auto;
+    position: absolute;
+    background-color: white;
+}
+/* timvieclam */
+section#timvieclam{
+    height:1200px;
+    width:100%;
+}
+section#timvieclam div >div:nth-child(odd){
+    /* background-color: red; */
+    height:240px;
+    align-content: center;
+    text-align: center;
+    padding:20px;
+    width:100%;
+    
+}
+section#timvieclam div>div:nth-child(even){
+    height:240px;
+    /* background-color: #499eff; */
+    align-content: center;
+    text-align: center;
+}
+section#timvieclam div>div div.nenH1{
+    width:60%;
+    height:80%;
+    margin-top:auto;
+    /* margin-bottom:auto; */
+    position: relative;
+    /* margin:auto; */
+    background-color: white;
+    
+}
+
+section#timvieclam div>div div.nenH1:hover{
+    transform: translateX(10%)  translateY(5%);
+    box-shadow: 1px 3px 10px black;
+    transition: all .5s;
+}
+section#timvieclam div>div div.nenH1Even{
+    width:50%;
+    height:80%;
+    margin-top:auto;
+    margin-left:auto;   
+    /* margin-bottom:auto; */
+    position: relative;
+    /* margin:auto; */
+    background-color: white;
+}
+section#timvieclam div>div div.nenH1Even:hover{
+    transform: translateX(-10%)  translateY(-5%);
+    box-shadow: 1px 3px 10px black;
+    transition: all .5s;
+}
+section#timvieclam div>div h1{
+    text-align: center;
 }
 /* Thiết kế footer */
-footer{
-    height:300px;
-    background-color: rgb(255, 208, 155);
-    color: rgb(88, 88, 88);
+footer {
+    height: 300px;
+    /* background-color: rgb(255, 208, 155); */
+
+    /* color: rgb(88, 88, 88); */
+    color: white;
+    background-color: black;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     /* border:1px solid black; */
     box-sizing: border-box;
-    
-    
+    z-index: 1;
+
 }
-footer div.ct{
-    height:90%;
+
+footer div.ct {
+    height: 90%;
     position: relative;
 }
-footer div.ct ul{
-    right:30%;
+
+footer div.ct ul {
+    right: 30%;
     position: relative;
 }
-footer div.ct ul>li{
+
+footer div.ct ul>li {
     list-style-type: none;
     font-size: .8rem;
     font-weight: 600;
-    padding:5px;
-    width:100%;
+    padding: 5px;
+    width: 100%;
 }
 
-footer .favicon{
-    height:50%;
-    position: relative;
-    box-sizing: border-box;
+footer div.icon {
+    display: flex;
 }
-footer div.ct div.flex>div img{
-    border-radius: 10px;
-    width:10%;
+
+footer a {
+    display: block;
+    width: 50%;
 }
-footer div.ct div.flex>div img:first-child{
-    border-radius: 50%;
+
+footer a>i {
+    font-size: 2.5rem;
+    /* color: #333333; */
+    color: white;
 }
-footer div.ct div.flex>div img:hover{
-    transform: scale(1.2);
-    transition: all .5s;
-    box-shadow: 1px 2px 5px black;
+
+footer a>i:hover {
+    scale: 1.1;
 }
-footer>div:last-child{
+
+footer>div:last-child {
     position: relative;
     text-align: center;
     font-size: 1.1rem;
+
 }
