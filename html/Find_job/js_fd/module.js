@@ -12,7 +12,7 @@ export function load(num) {
 // Cho quảng cáo ở homepage
 export function broadCast() {
     const broadCast = document.getElementById('broadcast');
-    const divBroadCast = broadCast.children[0];
+    const divBroadCast = broadCast.children[1];
     const buttons = Array.from(divBroadCast.children);
 
 
@@ -258,6 +258,24 @@ export function dgct(fl) {
 
             })
         }, 100);
+        setTimeout(() => {
+            let hCoHoi = document.getElementsByClassName('hCoHoi');
+
+            let hoverH2 = document.getElementsByClassName('hoverH2');
+            for (let j = 0; j < hoverH2.length; j++) {
+                let childrenCoHoi = hCoHoi[j].children;
+                hoverH2[j].addEventListener('click', function () {
+                    if (hCoHoi[j].classList.contains('move')) {
+                        hCoHoi[j].classList.remove('move');
+                    }
+                    else {
+                        hCoHoi[j].classList.add('move');
+                    }
+
+                })
+
+            }
+        }, 100);
     }
 
 }
@@ -409,4 +427,18 @@ export function Cv() {
     document.addEventListener('DOMContentLoaded', () => {
         filterImages('all');
     });
+}
+export function loginFunction() {
+    const container = document.getElementById('container');
+    const registerBtn = document.getElementById('register');
+    const loginBtn = document.getElementById('login');
+
+    registerBtn.addEventListener('click', () => {
+        container.classList.add("kichHoat");
+    });
+
+    loginBtn.addEventListener('click', () => {
+        container.classList.remove("kichHoat");
+    });
+
 }

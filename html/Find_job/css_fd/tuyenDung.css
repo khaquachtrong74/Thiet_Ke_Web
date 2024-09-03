@@ -3,7 +3,7 @@ main#nhaTuyenDung {
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin: 0;
+    margin-bottom:100px;
 }
 
 main#nhaTuyenDung div#tao {
@@ -74,7 +74,7 @@ main#nhaTuyenDung div#baiViet input {
 
 main#nhaTuyenDung div#hien {
     flex: 1;
-    background-color: white;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +94,7 @@ main#nhaTuyenDung div#hien>div#hienThi {
 main#nhaTuyenDung div#hien>div#hienThi>div#hienThiTrong {
     width: 95%;
     height: 95%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     background-color: white;
     border-radius: 16px;
     text-align: start;

@@ -1,17 +1,10 @@
-import { load,Cv, dgct, tuyenDung } from './module.js';
+import { load, Cv, dgct, tuyenDung, loginFunction } from './module.js';
 window.onload = () => {
     //Xử lý việc load từng nội dung trong main.
     // USER này có tác dụng là khi ấn vào sẽ hiện 2 lựa chọn đăng ký và đăng nhập
     let USER = document.getElementById('user');
-    USER.addEventListener('click', function () {
-        const userDiv = document.getElementById('nguoidung');
-        if (userDiv.style.display === 'none') {
-            userDiv.style.display = 'block';
-        }
-        else {
-            userDiv.style.display = 'none';
-        }
-    });
+    //noi dung 7 la trang login 
+
 
 
     window.addEventListener('scroll', function () {
@@ -61,6 +54,7 @@ window.onload = () => {
     let maucv = document.getElementById('maucv');
     let hmp = document.getElementById('hmp');
     let nhaTuyenDung = document.getElementsByClassName('homePageNhaTuyenDung');
+    nhaTuyenDung[1].setAttribute('style', 'cursor: pointer')
     let flg = true;
     let divNoiDung4 = document.getElementById('noidung4');
 
@@ -86,6 +80,10 @@ window.onload = () => {
                 setTimeout(() => {
                     tuyenDung();
                 }, 100);
+                load(7);//login
+                setTimeout(() => {
+                    loginFunction();
+                }, 100);
             }, 100);
 
         }
@@ -110,7 +108,7 @@ window.onload = () => {
             divNoiDung6.style.display = 'none';
             divNoiDung2.style.display = 'block';
         })
-        
+
         nhaTuyenDung[0].addEventListener('click', function () {
             homepage.style.display = 'none';
             divNoiDung3.style.display = 'none';
@@ -131,7 +129,17 @@ window.onload = () => {
             homepage.style.display = 'block';
         })
     }, 100);
-
+    let userDiv = document.getElementById('noidung7');
+    USER.addEventListener('click', function () {
+        setTimeout(() => {
+            if (userDiv.children[0].style.display === 'none') {
+                userDiv.children[0].style.display = 'flex';
+            }
+            else {
+                userDiv.children[0].style.display = 'none';
+            }
+        }, 100);
+    });
 
 
 }

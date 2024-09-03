@@ -3,19 +3,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
 }
-h2{
+
+h2 {
     text-align: center;
 }
-div.khoangtrang{
-    height:50px;
+.hd{
+    display: none;
+}
+
+div.khoangtrang {
+    height: 50px;
 }
 
 #dgct {
@@ -23,37 +29,42 @@ div.khoangtrang{
     min-height: 100vh;
     flex-direction: column;
 }
+
 #list_icon {
     font-size: 24px;
     cursor: pointer;
     margin-bottom: 20px;
 }
+
 div#list {
     width: 70px;
-    font-size:1.2rem;
+    font-size: 1.2rem;
     padding: 20px;
     background-color: #2c3e50;
     color: #ecf0f1;
     padding: 20px;
     transition: all 0.3s ease;
 }
-div#list div a{
+
+div#list div a {
     display: flex;
     align-items: center;
     padding: 10px 0;
     cursor: pointer;
     transition: all 0.2s ease;
-    color:white;
+    color: white;
     text-decoration: none;
 }
+
 div#list div:hover {
     background-color: #34495e;
 }
+
 div#list i {
     margin-right: 10px;
     width: 20px;
     text-align: center;
-    padding:5px;
+    padding: 5px;
 }
 
 
@@ -62,185 +73,300 @@ div.canhGa {
     padding: 20px;
     /* background-color: blue; */
 }
+
 /* Phần trang chủ */
-main#dgct section#trangchu{
+main#dgct section#trangchu {
     /* background-color: red; */
-    width:90%;
-    height:300px;
+    width: 90%;
+    height: 500px;
     /* height:800px; */
     /* margin:auto; */
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #2c3e50;
-    margin-bottom:50px; 
+    margin-bottom: 50px;
+    /* display: flex; */
     border-radius: 24px;
-    padding:20px;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    padding: 20px;
 }
 
-main#dgct section#trangchu h1{
+main#dgct section#trangchu div{
+    width: 80%;
+
+    margin: auto;
+    height: 15%;
+    display: flex;
+    background-color: white;
+
+
+}
+
+main#dgct section#trangchu div div#tc1 {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    padding: 20px;
+}
+main#dgct section#trangchu div div#tc1:focus{
+    /* border:1px solid black; */
+    border-right:none;
+    outline:none;
+}
+main#dgct section#trangchu div button {
+    width: 10%;
+    height: 100%;
+    border:none;
+    background-color: #333;
+    cursor: pointer;
+}
+main#dgct section#trangchu div button:hover{
+    background-color: #506c88;
+    color:white;
+}
+
+main#dgct section#trangchu h1 {
     font-size: 2rem;
 }
 
-main#dgct section#trangchu div#imgTrangChu{
-    width:60%;
-    height:20%;
-    margin-top:auto;
-    margin:auto;    
-    margin-bottom:auto;
+main#dgct section#trangchu div#imgTrangChu {
+    width: 60%;
+    height: 20%;
+    margin-top: auto;
+    margin: auto;
+    margin-bottom: auto;
     /* background-color: white; */
-    border-radius:24px;
+    border-radius: 24px;
     display: flex;
 }
-main#dgct section#trangchu div#imgTrangChu img{
-    width:50px;
+
+main#dgct section#trangchu div#imgTrangChu img {
+    width: 50px;
     background-color: white;
-    height:50px;
-    margin:auto;
+    height: 50px;
+    margin: auto;
     transition: box-shadow .3s;
 }
-main#dgct section#trangchu div#imgTrangChu img:hover{
+
+main#dgct section#trangchu div#imgTrangChu img:hover {
     box-shadow: 2px 3px 10px black;
 }
-main#dgct section#danhgia{
-    height:1500px;
-    padding:80px;
-    width:100%;
+
+main#dgct section#danhgia {
+    height: 1500px;
+    padding: 80px;
+    width: 100%;
     /* background-color: yellow; */
     /* display: flex; */
     /* justify-content: space-between; */
     box-sizing: border-box;
-    margin:auto;
+    margin: auto;
 }
- main#dgct section#danhgia>div{
-    width:100%;
+
+main#dgct section#danhgia>div {
+    width: 100%;
     /* border:1px solid black; */
     justify-content: end;
     display: flex;
-} 
+}
 
 
-main#dgct section#danhgia div#bieudo{
+main#dgct section#danhgia div#bieudo {
     /* background-color: white; */
     /* border:1px solid black; */
-    width:100%;
-    height:30%;
-    margin:auto;
-    padding:0;
+    width: 100%;
+    height: 30%;
+    margin: auto;
+    padding: 0;
 }
+
 main#dgct section#danhgia div#bieudo p {
     font-size: 24px;
     transition: box-shadow .6s;
+    box-sizing: border-box;
+    padding: 20px;
 }
-main#dgct section#danhgia div#bieudo p:hover{
+
+main#dgct section#danhgia div#bieudo p:hover {
     /* border-right:1px solid black; */
     box-shadow: 2px 4px 10px black;
 }
-main#dgct section#danhgia div#bieudo:first-child{
+
+main#dgct section#danhgia div#bieudo:first-child {
     justify-content: space-between;
 }
-main#dgct section#danhgia div#bieudo h2{
+
+main#dgct section#danhgia div#bieudo h2 {
     text-align: start;
-    margin:0;
+    margin: 0;
     font-size: 32px;
 }
-main#dgct section#danhgia div#bieudo:nth-child(2){
-    margin-right:auto;
-    
+
+main#dgct section#danhgia div#bieudo:nth-child(2) {
+    margin-right: auto;
+
     justify-content: start;
 }
-main#dgct section#danhgia div#bieudo:nth-child(2) h2{
-    padding:20px;
+
+main#dgct section#danhgia div#bieudo:nth-child(2) h2 {
+    padding: 20px;
 }
-main#dgct section#coHoi{
-    height:820px;
+
+main#dgct section#coHoi {
+    /* height: 1200px; */
     margin-bottom: 100px;
     /* background-color: yellow; */
-    padding:10px;
+    padding: 10px;
     box-sizing: border-box;
 }
-main#dgct section#coHoi>div#noiDungCoHoi{
-    width:70%;
-    height:100%;
-    padding:20px;
-    margin:auto;
-    border:1px solid black;
+
+main#dgct section#coHoi>div#noiDungCoHoi {
+    width: 70%;
+    height: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-bottom:100px;
+    border: 1px solid black;
 }
-main#dgct section#coHoi div:nth-child(odd){
+
+main#dgct section#coHoi div#noiDungCoHoi div{
     display: flex;
     justify-content: space-around;
     /* background-color: red; */
     flex-direction: column-reverse;
     flex-wrap: nowrap;
 }
-main#dgct section#coHoi ul:nth-child(odd){
+
+main#dgct section#coHoi ul:nth-child(odd) {
     display: flex;
 }
-main#dgct section#coHoi h2{
+
+main#dgct section#coHoi h2 {
     margin-bottom: 50px;
 }
+main#dgct section#coHoi div.kh{
+    margin-top:25px;
+    height:250px;
+    width:90%;
+    margin:auto;
+    /* border:1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-main#dgct section#nhanXet{
-    height:600px;
-    width:100%;
-    padding:20px;
+    /* background-color: black; */
+}
+main#dgct section#coHoi>div.coHoi>h2{
+    text-align: start;
+    /* margin-top:10px; */
+    cursor: pointer;
+    
+}
+main#dgct h2.hoverH2{
+    cursor: pointer;
+}
+main#dgct section#coHoi>div.kh div.hCoHoi{
+    width:60%;
+    height:80%;
+    /* border:1px solid black; */
+    transition: all .8s;
+}
+/* main#dgct section#coHoi>div.kh div.hCoHoi h3{
+    color:#f4f4f4;
+    
+}
+main#dgct section#coHoi>div.kh div.hCoHoi i{
+    /* color:rgb(33, 38, 107); */
+    /* color:#f4f4f4; */
+
+/* } */
+
+/* main#dgct section#coHoi div.kh h2:hover +div.hCoHoi{
+    display: block;
+    box-shadow: 2px 3px 10px black;
+    border:none;
+    transform: translateX(-10%) translateY(-5%);   
+} */
+main#dgct .move{
+    transform: translateX(-10%);
+     box-shadow: 2px 3px 10px black;
+}
+main#dgct section#nhanXet {
+    height: 600px;
+    width: 100%;
+    padding: 20px;
     /* background-color: antiquewhite; */
 }
-main#dgct section#nhanXet div#nguoidung{
+
+main#dgct section#nhanXet div#nguoidung {
     /* background-color: white; */
-    width:70%;
-    height:80%;
-    margin:auto;
-    padding:20px;
+    width: 70%;
+    height: 80%;
+    margin: auto;
+    padding: 20px;
 
 }
-main#dgct section#nhanXet div#nguoidung>div#comments{
-    width:90%;
-    height:60%;
+
+main#dgct section#nhanXet div#nguoidung>div#comments {
+    width: 90%;
+    height: 60%;
     /* background-color: white; */
     border-top-right-radius: 24px;
     border-top-left-radius: 24px;
-    border:1px solid black;
-    margin:auto;
-    padding:20px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 20px;
     box-sizing: border-box;
     overflow: auto;
-    
+
 }
-main#dgct section#nhanXet div#nguoidung>div#inputComment{
-    width:90%;
-    height:35%;
+
+main#dgct section#nhanXet div#nguoidung>div#inputComment {
+    width: 90%;
+    height: 35%;
     margin: auto;
     /* background-color: aliceblue; */
-    border:1px solid black;
-    padding:20px;
+    border: 1px solid black;
+    padding: 20px;
     box-sizing: border-box;
 }
-main#dgct section#nhanXet div#nguoidung>div#inputComment:empty::before{
-    color:black;
+
+main#dgct section#nhanXet div#nguoidung>div#inputComment:empty::before {
+    color: black;
     content: attr(data-placeholder);
 }
-main#dgct section#nhanXet div#nguoidung>div#commentButton{
-    width:90%;
-    margin:auto;
-    text-align: end;
-    
+
+main#dgct section#trangchu div div#tc1:empty::before {
+    color: black;
+    content: attr(data-placeholder);
 }
-main#dgct section#nhanXet div#nguoidung>div#commentButton button{
+
+main#dgct section#nhanXet div#nguoidung>div#commentButton {
+    width: 90%;
+    margin: auto;
+    text-align: end;
+
+}
+
+main#dgct section#nhanXet div#nguoidung>div#commentButton button {
     background-color: rgb(0, 44, 89);
-    border:none;
-    height:50px;
-    padding:10px;
+    border: none;
+    height: 50px;
+    padding: 10px;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
-    color:white;
+    color: white;
     transition: background-color .5s;
 }
-main#dgct section#nhanXet div#nguoidung>div#commentButton button:hover{
-    background-color:  rgb(0, 98, 195);
+
+main#dgct section#nhanXet div#nguoidung>div#commentButton button:hover {
+    background-color: rgb(0, 98, 195);
     color: rgb(227, 227, 227);
     outline: solid white;
 }
-main#dgct section#coHoi>div#noiDungCoHoi div>ul{
+
+main#dgct section#coHoi>div#noiDungCoHoi div>ul {
     display: flex;
     justify-content: space-around;
     width: 80%;
@@ -249,18 +375,20 @@ main#dgct section#coHoi>div#noiDungCoHoi div>ul{
     list-style: none;
     flex-wrap: wrap;
 }
-main#dgct section#coHoi>div#noiDungCoHoi div>ul>li{
+
+main#dgct section#coHoi>div#noiDungCoHoi div>ul>li {
     list-style-type: none;
     font-size: 1.2rem;
-    margin:10px;
-    border:1px solid black;
-    padding:15px;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 15px;
     transition: all .6s;
 }
-main#dgct section#coHoi>div#noiDungCoHoi div>ul>li:hover{
+
+main#dgct section#coHoi>div#noiDungCoHoi div>ul>li:hover {
     background-color: rgb(41, 52, 85);
     transform: scaleY(1.2);
     box-shadow: 1px 2px 3px black;
 
-    color:white;
+    color: white;
 }
