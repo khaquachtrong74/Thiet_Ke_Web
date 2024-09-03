@@ -1,0 +1,435 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 0;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100vw;
+    height: 300px;
+    overflow: hidden;
+}
+
+.banner-container img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    padding: 0;
+    margin: auto;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+li {
+    width: 28%;
+    border: 2px solid silver;
+    border-radius: 10px;
+    padding: 1%;
+    margin: 1%;
+    box-sizing: border-box;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+}
+
+li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: dodgerblue;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* CSS cho các nút lọc */
+.filter-buttons {
+    margin: 20px auto 20px auto;
+    justify-self: center;
+    text-align: center;
+    width: 35%;
+    padding: 5px;
+    position: absolute;
+    border-radius: 12px;
+    background: #ffffff1a;
+    border: 1px solid #ffffff20;
+    backdrop-filter: blur(16px) saturate(120%);
+    gap: 10px;
+}
+
+.filter-buttons button {
+    /*padding: 10px 20px;*/
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #ffffff00;
+    background: #ffffff00;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none;
+    transition: opacity 0.3s, color 0.3s;
+}
+
+.filter-buttons button > span {
+    position: relative;
+}
+
+.filter-buttons button > span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.filter-buttons button > span:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.filter-buttons button.active {
+    color: black;
+    padding: 10px;
+    opacity: 1;
+    border-radius: 20px;
+    background-color: white;
+}
+
+/* CSS cho các danh sách hình ảnh */
+.image-list {
+    display: none; /* Ẩn các danh sách hình ảnh mặc định */
+    flex-wrap: wrap; /* Đảm bảo các mục không bị tràn ra ngoài */
+}
+
+/* CSS cho modal */
+.modal {
+    display: none; /* Ẩn modal khi không cần thiết */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Nền mờ */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Đảm bảo modal ở trên cùng */
+}
+
+.modal-content {
+    background: white;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 900px;
+    display: flex;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Để nút ở vị trí dưới cùng */
+    z-index: 1001; /* Cao hơn nền mờ để nội dung modal không bị mờ */
+}
+
+.modal-content img {
+    width: 40%;
+    margin-right: 50px;
+    margin-left: 50px;
+    border: 2px solid silver;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.modal-controls {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Để nút "Sử dụng mẫu này" ở dưới cùng */
+}
+
+.modal-controls button {
+    background-color: dodgerblue;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.modal-controls a {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+.modal-controls button:hover {
+    background-color: steelblue;
+    color: white;
+}
+
+.modal-controls button a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1002; /* Đảm bảo nút đóng luôn ở trên cùng */
+}
+
+
+.canva-lists {
+    background-color: #EFF6FF;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Canh trái cho các nội dung bên trong */
+    align-items: center;
+}
+
+.canva-lists .main-text,
+.canva-lists .sub-text,
+.free-CV .main-text,
+.free-CV .sub-text {
+    line-height: 1.5;
+    margin: 10px 0;
+    padding: 0;
+}
+
+/* Để đảm bảo lề phải của đoạn văn cuối cùng cũng căn đều */
+.canva-lists::after,
+.free-CV::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-bottom: 10px; /* Khoảng cách dưới cùng của phần tử */
+}
+
+.canva-lists .main-text,
+.mean-is-CV .main-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+.canva-lists .sub-text,
+.free-CV .sub-text,
+.mean-is-CV .sub-text,
+.pay-attention-CV .sub-text,
+.mail-CV .sub-text {
+    font-size: 20px;
+    font-weight: normal;
+    color: grey;
+}
+
+.mail-CV .sub-text {
+    text-align: center;
+}
+
+.canva-lists button {
+    background-color: dodgerblue;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    margin-top: 150px;
+    text-align: center;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.canva-lists button:hover {
+    background-color: steelblue;
+    color: white;
+}
+
+.canva-lists .canva-items,
+.free-CV .free-CV-items {
+    border: none;
+    width: 45%;
+    padding: 2.5%;
+    margin: 2.5%;
+    text-align: left;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.mail-CV .mail-items {
+    background-color: rgb(254, 254, 243);
+    border: none;
+    width: 70%;
+    padding: 1%;
+    text-align: left;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.mail-CV .mail-items .sub-text{
+    text-align: left !important;
+    font-size: 16px;
+}
+
+.mail-CV .sub-text {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.canva-items img {
+    width: 80%;
+}
+
+.free-CV {
+    background-color: white;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+}
+
+.free-CV .main-text,
+.pay-attention-CV .main-text,
+.mail-CV .main-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: dodgerblue;
+}
+
+.mail-CV .main-num {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(255, 176, 30);
+}
+
+.mean-is-CV {
+    background-color: rgb(238, 255, 244);
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.mean-is-CV .mean-is-CV-items {
+    border: none;
+    width: 100%;
+    padding: 2.5%;
+    text-align: left;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: rgb(238, 255, 244);
+}
+
+.pay-attention-CV .pay-attention-CV-items-1 {
+    border: none;
+    width: 46%;
+    padding: 3%;
+    margin: 1%;
+    text-align: left;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #FFE8EB;
+}
+
+.pay-attention-CV img {
+    width: 15%;
+    float: left;
+    margin-right: 1%;
+}
+
+.pay-attention-CV .pay-attention-CV-items-2 {
+    border: none;
+    width: 46%;
+    padding: 3%;
+    margin: 1%;
+    text-align: left;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #F8FFE8;
+}
+
+.pay-attention-CV .pay-attention-CV-items-3 {
+    border: none;
+    width: 46%;
+    padding: 3%;
+    margin: 1%;
+    text-align: left;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #EEFAFF;
+}
+
+.pay-attention-CV .pay-attention-CV-items-4 {
+    border: none;
+    width: 46%;
+    padding: 3%;
+    margin: 1%;
+    text-align: left;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #FFEED3;
+}
+
+.pay-attention-CV .pay-attention-CV-items-1 .main-text,
+.pay-attention-CV .pay-attention-CV-items-2 .main-text,
+.pay-attention-CV .pay-attention-CV-items-3 .main-text,
+.pay-attention-CV .pay-attention-CV-items-4 .main-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.mail-CV {
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    width: 85%;
+}
+
+.focus {
+    background-color: rgb(206, 222, 255);
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.content-box {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+.content-box.show {
+    opacity: 1;
+    transform: translateX(0);
+}
