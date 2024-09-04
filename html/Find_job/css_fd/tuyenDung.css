@@ -1,4 +1,10 @@
-main#nhaTuyenDung {
+div#imgQuangCao{
+    height:200px;
+    width:100%;
+    background-image: url('../../../images/3.jpg');
+    background-size: cover;
+}
+div#nhaTuyenDung {
     height: 100vh;
     display: flex;
     justify-content: space-between;
@@ -89,6 +95,7 @@ main#nhaTuyenDung div#hien>div#hienThi {
     justify-content: center;
     align-items: center;
     background: linear-gradient(120deg, black, white);
+    display: none;
 }
 
 main#nhaTuyenDung div#hien>div#hienThi>div#hienThiTrong {

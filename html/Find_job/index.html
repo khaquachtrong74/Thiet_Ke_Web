@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Find_job/css_fd/style.css">
-    <link rel="stylesheet" href="../Find_job/css_fd/BaiTapLon.css">
+    <link rel="stylesheet" href="../Find_job/css_fd/loading.css">
+    <link rel="stylesheet" href="../Find_job/css_fd/index.css">
+    <link rel="stylesheet" href="../Find_job/css_fd/mauCv.css">
     <link rel="stylesheet" href="../Find_job/css_fd/danhGiaCongTy.css">
     <link rel="stylesheet" href="../Find_job/css_fd/tuyenDung.css">
-    <link rel="stylesheet" href="../Find_job/css_fd/Log-in.css">
+    <link rel="stylesheet" href="../Find_job/css_fd/logIn.css">
+    <link rel="stylesheet" href="../Find_job/css_fd/camNangViecLam.css">
+
+    <!-- reponsive -->
+    <link rel="stylesheet" href="../Find_job/css_fd/reponsiveIndex.css">
     <link href="../../images/logo.jpg" rel="shortcut icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -16,7 +21,6 @@
     <title>Find Job</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 </head>
 
 <body>
@@ -27,47 +31,101 @@
         <nav id="navbar" class="flex">
             <div id="favicon_homepage" class="contain" style="align-items:center">
                 <img src="../../images/logo.jpg" style="border-radius:10px;" alt="favicon">
+                <p id="lt">list</p>
             </div>
             <div class="contain flex">
-                <p id="danhgiacongty">Đánh giá tổng quan</p>
-                <p>Cẩm nang làm việc</p>
-                <p id="maucv">Mẫu CV tham khảo</p>
-                <p id="user">Người dùng</p>
                 
+                <div id="listss">
+                    <p id="danhgiacongty">Đánh giá tổng quan</p>
+                    <p id="camnang">Cẩm nang làm việc</p>
+                    <p id="maucv">Mẫu CV tham khảo</p>
+                    <p id="dangNhap">Người dùng
+                        <div id="taiKhoan">
+                            <p id="user">Đăng nhập!</p>
+                            <p id="thongTin">Tài khoản</p>
 
-                <p class="homePageNhaTuyenDung"> Nhà tuyển dụng</p>
+                        </div>
+                    </p>
+                    <p class="homePageNhaTuyenDung"> Nhà tuyển dụng</p>
+                </div>
+
+
+
             </div>
+
         </nav>
+        <div id="thongTinTaiKhoan">
+            <div id="thongTinCaNhan">
+                <div id="caNhan">
+                    <p id="nAme"></p>
+                    <p id="eMail"></p>
+                    <p id="dangXuat" style="text-decoration:underline; border:1px solid black; padding:10px;">Đăng xuất
+                    </p>
+
+                </div>
+            </div>
+        </div>
         <div id="noidung7"></div>
         <div style="width:100%;height:93px;"></div>
         <main id="homepage">
             <!-- 1. Quảng cáo -->
             <div id="noidung1"></div>
-            <div    style="margin-bottom:100px;"></div>
+            <div style="margin-bottom:100px;"></div>
             <section id="timvieclam">
                 <div>
-                    <div>
+                    <div class="odd">
                         <div class="nenH1">
-                            <h1>Bạn đang cần việc làm ?</h1>
+                            <div class="nenH1Trong">
+                                <h1>Bạn đang cần việc làm ?</h1>
+                            </div>
+
+                        </div>
+                        <div class="circles">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
                         </div>
                     </div>
-                    <div>
+                    <div class="even">
+                        <div class="circles">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
                         <div class="nenH1Even">
-                            <h1>Bạn đang thiếu tiền và kinh nghiệm?</h1>
+                            <div class="nenH1EvenTrong">
+                                <h1>Bạn đang thiếu tiền và kinh nghiệm?</h1>
+                            </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="odd">
                         <div class="nenH1">
-                            <h1>Bạn đang không biết nên chọn nơi thực tập và làm việc như nào?</h1>
+                            <div class="nenH1Trong">
+                                <h1>Bạn đang không biết nên chọn nơi thực tập và làm việc như nào?</h1>
+                            </div>
+                        </div>
+                        <div class="circles">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
                         </div>
                     </div>
-                    <div>
+                    <div class="even">
+                        <div class="circles">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
                         <div class="nenH1Even">
-                            <h1>Bạn gặp khó khăn trong việc tạo CV?</h1>
+                            <div class="nenH1EvenTrong">
+                                <h1>Bạn gặp khó khăn trong việc tạo CV?</h1>
+                            </div>
                         </div>
                     </div>
                     <div>
-                        <h1>Hãy đến với trang web của chúng tôi!</h1>
+                        <h1 id="gioiT">Hãy đến với Employment Supermarket chúng tôi!</h1>
+                        <h3 id="gioiT2">Nơi bạn có thể tìm thấy cho mình một công việc phù hợp với bản thân, cùng với
+                            những kinh nghiệm...</h3>
                     </div>
                 </div>
 
@@ -76,32 +134,30 @@
             <section>
                 <div id="khamphavieclam">
                     <div id="khampha" class="wow animate__backInLeft" data-wow-duration="2s">
-                        <div>
-                            <h2><i class="fa-solid fa-magnifying-glass"></i> Khám phá công việc theo ngành nghề </h2>
+                        <div class="khamphaLeft">
+                            <div class="circles">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                            <div class="khamphaNen">
+                                <div class="khamphaTrong"></div>
+                            </div>
                         </div>
-                        <div class="line"></div>
-                        <h3>Chọn một ngành nghề và chúng tôi sẽ hiển thị cho bạn những công việc phù hợp với vai trò đó!
-                        </h3>
+                        <div class="khamphaRight">
+                            <div class="khamphaNen">
+                                <div class="khamphaTrong"></div>
+                            </div>
+                            <div class="circles">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <h1>Khám phá công việc theo ngành nghề</h1>
+                        <h3>Tìm hiểu nghề nghiệp và chuyên môn dành cho bạn</h3>
                     </div>
                     <div id="vieclam" class="wow animate__bounceIn" data-wow-duration="2s">
-                        <div class="set">
-                            <div id="div123">
-                                <div id="div1">
-                                    <h2>Tài chính kế toán</h2>
-                                </div>
-                                <div id="div23">
-                                    <div id="div2">
-                                        <h2>Quản lý</h2>
-                                    </div>
-                                    <div id="div3">
-                                        <h2 style="margin:0;padding:var(--x);">Vận hành</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="div4">
-                                <h2>Phát triển kinh doanh & Bán hàng</h2>
-                            </div>
-                        </div>
                         <div class="set">
                             <div id="div4">
                                 <h2 style="margin:0;padding:var(--x);">Công nghệ thông tin & Viễn thông</h2>
@@ -119,8 +175,27 @@
                                     <h2>Truyền thông / Media</h2>
                                 </div>
                             </div>
-
                         </div>
+                        <div class="set">
+                            <div id="div123">
+
+                                <div id="div23">
+                                    <div id="div2">
+                                        <h2>Quản lý</h2>
+                                    </div>
+                                    <div id="div3">
+                                        <h2 style="margin:0;padding:var(--x);">Vận hành</h2>
+                                    </div>
+                                </div>
+                                <div id="div1">
+                                    <h2>Tài chính kế toán</h2>
+                                </div>
+                            </div>
+                            <div id="div4">
+                                <h2>Phát triển kinh doanh & Bán hàng</h2>
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>
@@ -169,43 +244,32 @@
                 </div>
             </section>
             <div class="line"></div>
-            <section>
-                <h2><i class="fa-solid fa-bars-progress"></i> Việc tuyển gấp</h2>
+            <section id="Viec">
+                <div id="nenViec">
+                    <div class="cle"></div>
+                    <div class="cle"></div>
+                    <div class="cle"></div>
+                    <div class="cle"></div>
+                    <div class="cle"></div>
+                    <div class="cle"></div>
+                    <h1>Việc làm hấp dẫn đang tuyển gấp</h1>
+                    <h3>Có rất nhiều công việc đang tuyển gấp vô cùng hấp dẫn đang chờ bạn</h3>
+                </div>
                 <div class="bg">
 
                     <div class="job">
                         <div>
-                            <div><img src="../../images/b1.jpg" alt="">
+                            <div class="jobLists"><img src="../../images/b1.jpg" alt="">
                                 <p>[HCM] nhân viên kinh doanh đại lý <br><strong>Công ty Abc</strong> <br><u>
                                         30tr->40tr</u>
                                 </p>
                             </div>
-                            <div><img src="../../images/b1.jpg" alt="">
+                            <div class="jobLists"><img src="../../images/b1.jpg" alt="">
                                 <p>[HCM] nhân viên kinh doanh đại lý <br><strong>Công ty Abc</strong> <br><u>
                                         30tr->40tr</u>
                                 </p>
                             </div>
-                            <div><img src="../../images/b1.jpg" alt="">
-                                <p>[HCM] nhân viên kinh doanh đại lý <br><strong>Công ty Abc</strong> <br><u>
-                                        30tr->40tr</u>
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="job">
-                        <div>
-                            <div><img src="../../images/b1.jpg" alt="">
-                                <p>[HCM] nhân viên kinh doanh đại lý <br><strong>Công ty Abc</strong> <br><u>
-                                        30tr->40tr</u>
-                                </p>
-                            </div>
-                            <div><img src="../../images/b1.jpg" alt="">
-                                <p>[HCM] nhân viên kinh doanh đại lý <br><strong>Công ty Abc</strong> <br><u>
-                                        30tr->40tr</u>
-                                </p>
-                            </div>
-                            <div><img src="../../images/b1.jpg" alt="">
+                            <div class="jobLists"><img src="../../images/b1.jpg" alt="">
                                 <p>[HCM] nhân viên kinh doanh đại lý <br><strong>Công ty Abc</strong> <br><u>
                                         30tr->40tr</u>
                                 </p>
@@ -215,17 +279,37 @@
                     </div>
                     <div class="job">
                         <div>
-                            <div><img src="../../images/b1.jpg" alt="">
+                            <div class="jobLists"><img src="../../images/b1.jpg" alt="">
                                 <p>[HCM] nhân viên kinh doanh đại lý <br><strong>Công ty Abc</strong> <br><u>
                                         30tr->40tr</u>
                                 </p>
                             </div>
-                            <div><img src="../../images/b1.jpg" alt="">
+                            <div class="jobLists"><img src="../../images/b1.jpg" alt="">
                                 <p>[HCM] nhân viên kinh doanh đại lý <br><strong>Công ty Abc</strong> <br><u>
                                         30tr->40tr</u>
                                 </p>
                             </div>
-                            <div><img src="../../images/b1.jpg" alt="">
+                            <div class="jobLists"><img src="../../images/b1.jpg" alt="">
+                                <p>[HCM] nhân viên kinh doanh đại lý <br><strong>Công ty Abc</strong> <br><u>
+                                        30tr->40tr</u>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="job">
+                        <div>
+                            <div class="jobLists"><img src="../../images/b1.jpg" alt="">
+                                <p>[HCM] nhân viên kinh doanh đại lý <br><strong>Công ty Abc</strong> <br><u>
+                                        30tr->40tr</u>
+                                </p>
+                            </div>
+                            <div class="jobLists"><img src="../../images/b1.jpg" alt="">
+                                <p>[HCM] nhân viên kinh doanh đại lý <br><strong>Công ty Abc</strong> <br><u>
+                                        30tr->40tr</u>
+                                </p>
+                            </div>
+                            <div class="jobLists"><img src="../../images/b1.jpg" alt="">
                                 <p>[HCM] nhân viên kinh doanh đại lý <br><strong>Công ty Abc</strong> <br><u>
                                         30tr->40tr</u>
                                 </p>
@@ -254,10 +338,11 @@
         <div id="noidung2"></div>
         <div id="noidung3"></div>
         <div id="noidung6"></div>
+        <div id="noidung8"></div>
         <footer class="wow animate__zoomInUp" data-wow-duration="1s">
             <div class="ct">
                 <div class="flex">
-                    <div style="width:30%;">
+                    <div id="conTact">
                         <h2>CONTACT WITH US</h2>
                         <div class="icon">
                             <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -313,8 +398,6 @@
     <script type="module" src="../Find_job/js_fd/func.js"></script>
     <script type="module">
         import { load, broadCast } from '../Find_job/js_fd/module.js';
-
-
         load(1);
         setTimeout(() => {
             broadCast();

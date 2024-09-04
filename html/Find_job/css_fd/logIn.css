@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
 
 main#mainLogin {
 
@@ -21,7 +15,8 @@ main#mainLogin {
     left:0;
 }
 
-.container {
+
+main#mainLogin .container {
     background-color: #ffffff00;
     border-radius: 24px;
     
@@ -33,25 +28,29 @@ main#mainLogin {
     min-height: 480px;
 }
 
-.container p {
+
+main#mainLogin .container p {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
 
-.container span {
+
+main#mainLogin .container span {
     font-size: 12px;
 }
 
-.container a {
+
+main#mainLogin .container a {
     color: #333;
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
-.container button {
+
+main#mainLogin .container button {
     background-color: #512da8;
     margin-top: 10px;
     color: #fff;
@@ -70,19 +69,22 @@ main#mainLogin {
     transition: all 0.2s ease;
 }
 
-.container button:hover {
+
+main#mainLogin .container button:hover {
     color: dodgerblue;
     background-color: #fff;
     border: 2px solid dodgerblue;
     box-shadow: 5px 5px 0 dodgerblue;
 }
 
-.container button:active {
+
+main#mainLogin .container button:active {
     color: darkorange;
     border: 2px solid darkorange;
     box-shadow: none;
     transform: translateY(4px);
 }
+
 button.hidden:hover {
     color: crimson;
     background-color: #fff !important;
@@ -90,18 +92,21 @@ button.hidden:hover {
     box-shadow: 5px 5px 0 crimson;
 }
 
+
 button.hidden:active {
     color: darkorange;
     border: 2px solid darkorange !important;
     box-shadow: none;
     transform: translateY(4px);
 }
-.container button.hidden {
+
+main#mainLogin .container button.hidden {
     background-color: transparent;
     border-color: #fff;
 }
 
-.container .form-a {
+
+main#mainLogin .container .form-a {
     height: 100%;
     background-color: white;
     /* border-radius: 0 24px 24px 0; */
@@ -115,7 +120,8 @@ button.hidden:active {
     transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
 }
 
-.container .form-b {
+
+main#mainLogin .container .form-b {
     height: 100%;
     background-color: white;
     border-radius: 24px 0 0 24px;
@@ -129,7 +135,8 @@ button.hidden:active {
     transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
 }
 
-.container input {
+
+main#mainLogin .container input {
     background-color: #eee;
     border: none;
     margin: 8px 0;
@@ -146,39 +153,45 @@ button.hidden:active {
     transition: all 0.2s ease;
 }
 
-.container input:hover {
+
+main#mainLogin .container input:hover {
     color: dodgerblue;
     background-color: #fff;
     border: 2px solid dodgerblue;
     box-shadow: 5px 5px 0 dodgerblue;
 }
 
-.container input:focus {
+
+main#mainLogin .container input:focus {
     color: darkorange;
     border: 2px solid darkorange;
     box-shadow: none;
     transform: translateY(4px);
 }
 
-.form-container {
+
+main#mainLogin .form-container {
     position: absolute;
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
 }
 
-.sign-in {
+
+main#mainLogin .sign-in {
     left: 0;
     width: 50%;
     z-index: 2;
 }
 
-.container.kichHoat .sign-in {
+
+main#mainLogin .container.kichHoat .sign-in {
     transform: rotateY(180deg);
     opacity: 0;
 }
 
-.sign-up {
+
+main#mainLogin .sign-up {
     left: 0;
     width: 50%;
     opacity: 0;
@@ -186,17 +199,20 @@ button.hidden:active {
     transform: rotateY(-180deg);
 }
 
-.container.kichHoat .sign-up {
+
+main#mainLogin .container.kichHoat .sign-up {
     transform: rotateY(0);
     opacity: 1;
     z-index: 5;
 }
 
-.social-icons {
+
+main#mainLogin .social-icons {
     margin: 20px 0;
 }
 
-.social-icons a {
+
+main#mainLogin .social-icons a {
     /* border-radius: 10px; */
     display: inline-flex;
     justify-content: center;
@@ -209,25 +225,29 @@ button.hidden:active {
     outline: none;
     color: black;
     border: 2px solid #000;
+    border-radius:10px;
     box-shadow: 5px 5px 0 #000;
     transition: all 0.2s ease;
 }
 
-.social-icons a:hover {
+
+main#mainLogin .social-icons a:hover {
     color: dodgerblue;
     background-color: #fff;
     border: 2px solid dodgerblue;
     box-shadow: 5px 5px 0 dodgerblue;
 }
 
-.social-icons a:active {
+
+main#mainLogin .social-icons a:active {
     color: darkorange;
     border: 2px solid darkorange;
     box-shadow: none;
     /* transform: translateY(4px); */
 }
 
-.toggle-container {
+
+main#mainLogin .toggle-container {
     position: absolute;
     top: 0;
     left: 50%;
@@ -240,11 +260,13 @@ button.hidden:active {
     transform: rotateY(0);
 }
 
-.container.kichHoat .toggle-container {
+
+main#mainLogin .container.kichHoat .toggle-container {
     transform: rotateY(180deg);
 }
 
-.toggle {
+
+main#mainLogin .toggle {
     background-color: dodgerblue;
     background: linear-gradient(to right, dodgerblue, #8e60fb);
     color: #fff;
@@ -256,11 +278,13 @@ button.hidden:active {
     transition: transform 0.6s ease-in-out;
 }
 
-.container.kichHoat .toggle {
+
+main#mainLogin .container.kichHoat .toggle {
     transform: translateX(50%) rotateY(0);
 }
 
-.toggle-panel {
+
+main#mainLogin .toggle-panel {
     position: absolute;
     width: 50%;
     height: 100%;
@@ -276,15 +300,18 @@ button.hidden:active {
     transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
 }
 
-.toggle-left {
+
+main#mainLogin .toggle-left {
     transform: rotateY(-180deg);    
 }
 
-.container.kichHoat .toggle-left {
+
+main#mainLogin .container.kichHoat .toggle-left {
     transform: rotateY(0);
 }
 
-.toggle-right {
+
+main#mainLogin .toggle-right {
     position: absolute; /* Added for positioning */
     right: 0;
     width: 50%;
@@ -292,10 +319,12 @@ button.hidden:active {
     transform: rotateY(0);
 }
 
-.container.kichHoat .toggle-right {
+
+main#mainLogin .container.kichHoat .toggle-right {
     transform: rotateY(180deg);
 }
-div.toggle-panel.toggle-left h1{
+
+main#mainLogin div.toggle-panel.toggle-left h1{
     /* transform: rotate(180deg); */
     transform: rotateX(0deg) rotateY(180deg);
 }

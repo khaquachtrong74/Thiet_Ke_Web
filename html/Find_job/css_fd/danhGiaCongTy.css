@@ -1,21 +1,4 @@
-/* Reset và styles chung */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-}
-
-h2 {
-    text-align: center;
-}
 .hd{
     display: none;
 }
@@ -150,6 +133,7 @@ main#dgct section#trangchu div#imgTrangChu img {
 }
 
 main#dgct section#trangchu div#imgTrangChu img:hover {
+    
     box-shadow: 2px 3px 10px black;
 }
 
@@ -183,7 +167,7 @@ main#dgct section#danhgia div#bieudo {
 
 main#dgct section#danhgia div#bieudo p {
     font-size: 24px;
-    transition: box-shadow .6s;
+    transition: box-shadow .6s, transform .8s;
     box-sizing: border-box;
     padding: 20px;
 }
@@ -191,6 +175,10 @@ main#dgct section#danhgia div#bieudo p {
 main#dgct section#danhgia div#bieudo p:hover {
     /* border-right:1px solid black; */
     box-shadow: 2px 4px 10px black;
+    transform: translateX(10%) translateY(-5%) scale(1.04);
+    
+    background-color: #2c3e50;
+    color:white;
 }
 
 main#dgct section#danhgia div#bieudo:first-child {

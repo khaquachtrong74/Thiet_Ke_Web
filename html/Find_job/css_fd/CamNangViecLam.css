@@ -1,10 +1,4 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.banner-container {
+main#camNangViecLam .banner-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -16,14 +10,14 @@ body {
     overflow: hidden;
 }
 
-.banner-container img {
+main#camNangViecLam .banner-container img {
     max-width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
 /* CSS cho các nút lọc */
-.filter-buttons {
+main#camNangViecLam .ftButton {
     margin: 20px auto 20px auto;
     justify-self: center;
     text-align: center;
@@ -37,7 +31,7 @@ body {
     gap: 10px;
 }
 
-.filter-buttons button {
+main#camNangViecLam .ftButton button {
     /*padding: 10px 20px;*/
     margin: 0 10px;
     border: none;
@@ -52,11 +46,11 @@ body {
     transition: opacity 0.3s, color 0.3s;
 }
 
-.filter-buttons button > span {
+main#camNangViecLam .ftButton button > span {
     position: relative;
 }
 
-.filter-buttons button > span::after {
+main#camNangViecLam .ftButton button > span::after {
     content: "";
     position: absolute;
     left: 0;
@@ -69,12 +63,12 @@ body {
     transition: transform 0.3s ease-out;
 }
 
-.filter-buttons button > span:hover::after {
+main#camNangViecLam .ftButton button > span:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
-.filter-buttons button.active {
+main#camNangViecLam .ftButton button.active {
     color: white;
     padding: 10px;
     opacity: 1;
@@ -82,7 +76,7 @@ body {
     background-color: darkorange;
 }
 
-ul {
+main#camNangViecLam ul {
     display: flex;
     justify-content: space-between;
     width: 80%;
@@ -92,7 +86,7 @@ ul {
     flex-wrap: wrap;
 }
 
-li {
+main#camNangViecLam li {
     width: 32.3%;
     border: 0.5px solid silver;
     border-radius: 10px;
@@ -104,53 +98,68 @@ li {
     cursor: pointer;
 }
 
-
-.lists li:hover {
+main#camNangViecLam div.imgLists li{
+    width: 32.3%;
+    border: 0.5px solid silver;
+    border-radius: 10px;
+    padding: 0.5%;
+    margin: 0.5%;
+    box-sizing: border-box;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+main#camNangViecLam div.imgLists li:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border-color: dodgerblue;
     transform: scale(1.1,1.1);
+    
 }
-
-.lists ul:hover > li:not(:hover) {
+.notHover
+{
+    transform: scale(0.9,0.9);
+    filter: blur(1.5px) ;
+}
+/* main#camNangViecLam .lists div.imgLists:hover + div.imgLists:not(:hover){
     transform: scale(0.9,0.9);
     filter: blur(1.5px);
-}
+} */
 
-.lists .main-text, .sub-text {
+main#camNangViecLam .lists .main-text, .sub-text {
     line-height: 1.5;
     margin: 10px 0;
     padding: 0;
     position: relative;
 }
 
-.lists .main-text {
+main#camNangViecLam .lists .main-text {
     font-size:16px;
     font-weight: bold;
     color: black;
 }
 
-.lists li {
+main#camNangViecLam .lists li {
     overflow: hidden;
     padding: 10px;
 }
 
-.lists img {
+main#camNangViecLam .lists img {
     float: left;
     margin-right: 10px;
     width: 25%;
 }
 
-.lists .main-text, .time, .sub-text {
+main#camNangViecLam .lists .main-text, .time, .sub-text {
     margin: 8%;
 }
 
-.lists .sub-text {
+main#camNangViecLam .lists .sub-text {
     font-size: 16px;
     font-weight: normal;
     color: grey;
 }
 
-.lists .time {
+main#camNangViecLam .lists .time {
     font-size: 16px;
     font-weight: normal;
     color:  dodgerblue;

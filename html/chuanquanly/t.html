@@ -3,71 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ô nhập comment tùy chỉnh</title>
     <style>
-        .x-button {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            width: 30px;
-            height: 30px;
-            background-color: transparent;
+        .comment-box {
+            width: 300px;
+            min-height: 100px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            overflow: auto;
+        }
+        .comment-box:empty:before {
+            content: attr(data-placeholder);
+            color: #888;
+        }
+        .comment-box:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .submit-btn {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
             border: none;
             cursor: pointer;
-            z-index: 31;
         }
-
-        .x-button::before,
-        .x-button::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 20px;
-            height: 2px;
-            background-color: black;
-        }
-
-        .x-button::before {
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-
-        .x-button::after {
-            transform: translate(-50%, -50%) rotate(-45deg);
+        .submit-btn:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="dangky">Click me</div>
+    <div id="commentBox" class="comment-box" contenteditable="true" data-placeholder="Nhập bình luận của bạn ở đây..."></div>
+    <button id="submitComment" class="submit-btn">Gửi bình luận</button>
 
     <script>
-        let dangkyElements = document.getElementsByClassName('dangky');
+        const commentBox = document.getElementById('commentBox');
+        const submitBtn = document.getElementById('submitComment');
 
-        for (let i = 0; i < dangkyElements.length; i++) {
-            dangkyElements[i].addEventListener('click', function () {
-                if (this.querySelector('.hoverDiv')) {
-                    return;
-                }
+        submitBtn.addEventListener('click', () => {
+            const comment = commentBox.innerText.trim();
+            if (comment) {
+                console.log('Bình luận đã gửi:', comment);
+                // Ở đây bạn có thể thêm code để xử lý việc gửi bình luận
+                // Ví dụ: gửi đến server, hiển thị trên trang, v.v.
+                commentBox.innerText = ''; // Xóa nội dung sau khi gửi
+            } else {
+                console.log('Vui lòng nhập bình luận trước khi gửi');
+            }
+        });
 
-                let d = document.createElement('div');
-                let x = document.createElement('button');
-                let k = document.createElement('div');
-
-                x.classList.add('x-button');
-                k.setAttribute('style', 'position: fixed; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.5); display:flex; justify-content:center; align-items:center;z-index:20;');
-
-                d.classList.add('hoverDiv');
-                d.appendChild(x);
-                d.setAttribute('style', 'width:300px; height:300px; background-color:blue; position:relative; z-index:30;');
-
-                k.appendChild(d);
-                document.body.appendChild(k);
-
-                x.addEventListener('click', function (event) {
-                    event.stopPropagation();
-                    k.parentElement.removeChild(k);
-                });
-            });
-        }
+        // Ngăn chặn việc nhấn Enter tạo thẻ div mới
+        commentBox.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                // Thêm dấu xuống dòng thay vì tạo div mới
+                document.execCommand('insertLineBreak');
+            }
+        });
     </script>
 </body>
 </html>

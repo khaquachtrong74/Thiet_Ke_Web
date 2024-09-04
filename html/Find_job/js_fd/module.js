@@ -12,7 +12,7 @@ export function load(num) {
 // Cho quảng cáo ở homepage
 export function broadCast() {
     const broadCast = document.getElementById('broadcast');
-    const divBroadCast = broadCast.children[1];
+    const divBroadCast = broadCast.children[0];
     const buttons = Array.from(divBroadCast.children);
 
 
@@ -78,7 +78,7 @@ export function dgct(fl) {
 
                     // divList.style.transition = 'all 1s';
 
-                    sectionComment.setAttribute('style', 'opacity:.3; background-color:black')
+                    // sectionComment.setAttribute('style', 'opacity:.3; background-color:black')
                 }
                 else {
                     divList.style.width = '70px';
@@ -87,7 +87,7 @@ export function dgct(fl) {
                     pNhanXet.style.display = 'none';
 
                     pCoHoi.style.display = 'none';
-                    sectionComment.setAttribute('style', 'opacity:1; background-color:none')
+                    // sectionComment.setAttribute('style', 'opacity:1; background-color:none')
 
                 }
 
@@ -293,7 +293,7 @@ export function tuyenDung() {
     let pMail = document.getElementById('email');
     const pArray = [pTenCongTy, pViTri, pMucLuong, pSoDienThoai, pMail];
     let pArr = document.getElementsByClassName('tt');
-
+    let hienThi = document.getElementById('hienThi');
     baiViet.style.display = 'none';
     taoBaiViet.addEventListener('click', function () {
         baiViet.style.display = baiViet.style.display === 'none' ? 'block' : 'none';
@@ -328,6 +328,7 @@ export function tuyenDung() {
 
             pArr[i].textContent = baiVietP[i].textContent + pArray[i].value;
         }
+        hienThi.style.display = 'flex';
     });
 
     const dropZone = document.getElementById('dropZone');
@@ -367,12 +368,12 @@ export function tuyenDung() {
     });
 
 }
-// js cho trang Mẫu CV tham khảo
+// js cho trang Mẫu CV tham khảo và cẩm nang
 export function Cv() {
     let selectedLink = ''; // Biến toàn cục để lưu liên kết của CV được chọn
+    let lists = document.querySelectorAll('.image-list');
 
     function filterImages(category) {
-        let lists = document.querySelectorAll('.image-list');
         lists.forEach(list => {
             if (category === 'all') {
                 list.style.display = 'flex'; // Hiển thị tất cả
@@ -427,11 +428,96 @@ export function Cv() {
     document.addEventListener('DOMContentLoaded', () => {
         filterImages('all');
     });
+
+    function checkBoxes() {
+        const triggerBottom = window.innerHeight / 5 * 4;
+
+        // Chọn tất cả các phần tử muốn áp dụng hiệu ứng từ phần modal trở xuống
+        const boxes = document.querySelectorAll('.content-box'); // Đảm bảo các phần tử này tồn tại
+
+        boxes.forEach((box) => {
+            const boxTop = box.getBoundingClientRect().top;
+
+            if (boxTop < triggerBottom) {
+                box.classList.add('show');
+            } else {
+                box.classList.remove('show');
+            }
+        });
+    }
+    // Gọi checkBoxes khi cuộn trang
+    window.addEventListener('scroll', checkBoxes);
+
+    // Gọi một lần khi tải trang để áp dụng hiệu ứng cho các phần tử đã trong viewport
+    document.addEventListener('DOMContentLoaded', checkBoxes);
+
+    // các phần tử bên file cẩm nang
+    let allButton = document.getElementById('allButton');
+    // các phần tử bên file mẫu cv
+    let simpleButton = document.getElementById('simple-button');
+    let modernButton = document.getElementById('modern-button');
+
+
+    simpleButton.addEventListener('click', function () {
+        filterImages('simple');
+    })
+    modernButton.addEventListener('click', function () {
+        filterImages('modern');
+    })
+    allButton.addEventListener('click', function () {
+        filterImages('all');
+    })
+    // Gọi checkBoxes khi cuộn trang
+    window.addEventListener('scroll', checkBoxes);
+
+    // Gọi một lần khi tải trang để áp dụng hiệu ứng cho các phần tử đã trong viewport
+    document.addEventListener('DOMContentLoaded', checkBoxes);
+
+
 }
-export function loginFunction() {
+// js cho login
+export function loginFunction(nAme, eMail, pAssword, divNoiDung7) {
+    let dangNhap = document.getElementById('dangNhap');
+    let dangXuat = document.getElementById('dangXuat');
+    let taiKhoan = document.getElementById('taiKhoan');
+    // thao tác
+    let thongTin = document.getElementById('thongTin');
+    let thongTinTaiKhoan = document.getElementById('thongTinTaiKhoan');
+    let pUser = document.getElementById('user');
     const container = document.getElementById('container');
     const registerBtn = document.getElementById('register');
     const loginBtn = document.getElementById('login');
+    //đăng ký
+    const signButton = document.getElementById('signButton');
+    let signName = document.getElementById('signName');
+    let signEmail = document.getElementById('signEmail');
+    let signPassword = document.getElementById('signPassword');
+    // đăng nhập
+    const loginButton = document.getElementById('loginButton');
+    let loginEmail = document.getElementById('loginEmail');
+    let loginPassword = document.getElementById('loginPassword');
+    // thông tin 
+    let pNAme = document.getElementById('nAme');
+    let pEMail = document.getElementById('eMail');
+
+
+
+
+    thongTin.style.display = 'none';
+    dangNhap.addEventListener('click', function () {
+        if (taiKhoan.style.display === 'block') {
+            taiKhoan.style.display = 'none'
+        }
+        else {
+            taiKhoan.style.display = 'block';
+        }
+    })
+    dangXuat.addEventListener('click', function () {
+        pUser.style.display='block';
+        thongTin.style.display ='none';
+        thongTinTaiKhoan.style.display ='none';
+    })
+
 
     registerBtn.addEventListener('click', () => {
         container.classList.add("kichHoat");
@@ -440,5 +526,139 @@ export function loginFunction() {
     loginBtn.addEventListener('click', () => {
         container.classList.remove("kichHoat");
     });
+    signButton.addEventListener('click', function () {
+        event.preventDefault();  // Prevent form from submitting and reloading the page
 
+        if (signName.value.strim !== '' && signEmail.value.strim !== '' && signPassword.value.strim !== "") {
+            nAme = signName;
+            eMail = signEmail;
+            pAssword = signPassword;
+            console.log('dang ky thanh cong');
+            console.log(nAme.value)
+        }
+        else {
+            console.log('dang ky that bai')
+        }
+
+    })
+    loginButton.addEventListener('click', function () {
+        console.log(loginEmail.value)
+        console.log(nAme.value)
+        console.log(loginPassword.value);
+        console.log(pAssword.value);
+        if (loginEmail.value === eMail.value && loginPassword.value === pAssword.value) {
+            console.log('dang nhap thanh cong');
+            pUser.style.display = 'none';
+            divNoiDung7.style.display = 'none';
+            thongTin.style.display = 'block';
+            pNAme.textContent = 'Tên người dùng: ' + nAme.value;
+            pEMail.textContent = 'Email: ' + eMail.value;
+
+        }
+        else {
+            console.log('Dang nhap that bai');
+        }
+    })
+    thongTin.addEventListener('click', function () {
+        if (thongTinTaiKhoan.style.display === 'flex') {
+            thongTinTaiKhoan.style.display = 'none';
+        }
+        else {
+            thongTinTaiKhoan.style.display = 'flex';
+        }
+    })
+
+}
+export function camNangLamViec() {
+    function ftImg(category) {
+        let lists = document.querySelectorAll('.imgLists');
+        lists.forEach(list => {
+            if (category === 'all' || list.classList.contains(category)) {
+                list.style.display = 'flex';
+            } else {
+                list.style.display = 'none';
+            }
+        });
+
+        // Cập nhật trạng thái nút lọc
+        document.querySelectorAll('.ftButton button').forEach(button => {
+            if (button.id === `${category}-button` || (category === 'all' && button.id === 'all-button')) {
+                button.classList.add('active');
+                button.classList.remove('inactive');
+            } else {
+                button.classList.remove('active');
+                button.classList.add('inactive');
+            }
+        });
+
+        // Gọi hàm randomLists nếu nhấn vào nút "Tất cả"
+        if (category === 'all') {
+            randomLists();
+        }
+    }
+
+    function randomLists() {
+        let container = document.getElementById('image-container');
+        let lists = Array.from(container.querySelectorAll('.imgLists'));
+        // Xáo trộn danh sách
+        for (let i = lists.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [lists[i], lists[j]] = [lists[j], lists[i]]; // Hoán đổi các phần tử
+        }
+        // Thêm lại các danh sách đã xáo trộn vào container
+        lists.forEach(list => container.appendChild(list));
+    }
+    let allButton = document.getElementById('all-button');
+    let storyButton = document.getElementById('story-button')
+    let moveButton = document.getElementById('move-button');
+    let orienButton = document.getElementById('orien-button')
+    let consulButton = document.getElementById('consul-button');
+    // Đảm bảo mã JavaScript được chạy sau khi DOM đã tải xong
+    document.addEventListener('DOMContentLoaded', () => {
+        ftImg('all'); // Khởi tạo trạng thái ban đầu
+    });
+    allButton.addEventListener('click', function () {
+        ftImg('all');
+    })
+    storyButton.addEventListener('click', function () {
+        ftImg('story');
+    })
+    moveButton.addEventListener('click', function () {
+        ftImg('move');
+    })
+    orienButton.addEventListener('click', function () {
+        ftImg('orien');
+    })
+    consulButton.addEventListener('click', function () {
+        ftImg('consul');
+    })
+    let liLists = document.getElementsByClassName('liLists');
+    for (let i = 0; i < liLists.length; i++) {
+
+
+
+        liLists[i].addEventListener('mousemove', function () {
+
+
+            for (let j = 0; j < liLists.length; j++) {
+                if (j !== i) {
+                    liLists[j].classList.add('notHover');
+                }
+                else {
+                    liLists[j].classList.remove('notHover');
+                }
+            }
+        })
+        liLists[i].addEventListener('mouseleave', function () {
+
+
+            for (let j = 0; j < liLists.length; j++) {
+
+                liLists[j].classList.remove('notHover');
+            }
+
+        })
+
+
+    }
 }

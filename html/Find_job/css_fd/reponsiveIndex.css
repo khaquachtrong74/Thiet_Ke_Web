@@ -1,0 +1,322 @@
+/* Homepage */
+@media (min-width:770px) {
+    div#listss{
+        display: flex;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
+    /* CSS cho máy tính bảng */
+
+    .flex{
+        display: block !important;
+    }
+    #navbar #lt{
+        display: block;
+    }
+    div#listss{
+        display: none;
+    }
+    #navbar div#favicon_homepage{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    #navbar div#favicon_homepage img{
+        width:15%;
+    }
+    #navbar>div.flex p:hover {
+        transform: translateX(5%);
+        background-color: #2c3e50;
+        color: white;
+    }
+    main#homepage section#timvieclam div>div.odd {
+        height: 120px;
+    
+    }
+    main#homepage section#timvieclam div>div.odd h1{
+        font-size: 12px;
+    }
+    main#homepage section#timvieclam div>div.even {
+        height:120px;
+    }
+    main#homepage section#timvieclam div>div.even h1{
+        font-size: 12px;
+    }
+    main#homepage section#timvieclam div>div h1#gioiT{
+        font-size: 1.7rem;
+        margin-top:50px;
+    }
+    main#homepage section#timvieclam div>div h3#gioiT2{
+        width:80%;
+    }
+    main#homepage div#khampha div.khamphaLeft{
+        height:50px;
+    }
+    main#homepage div#khampha div.khamphaRight{
+        height: 50px;
+    }
+    main#homepage div#khamphavieclam h2{
+        font-size:16px;
+    }
+
+    main#homepage section div.gioithieu_bg{
+        display: block;
+    }  
+    main#homepage div.gioithieu_bg>div#gioithieu_{
+        margin: auto;
+        text-align: center;
+        width:90%;
+    }
+    main#homepage div.gioithieu_bg>div#gioithieu_img{
+        width:100%;
+        height:250px;
+        margin-bottom: 80px;
+    }
+    main#homepage div.gioithieu_bg>div#gioithieu_ h1{
+        font-size: 24px ;
+        text-align: center;
+        margin-bottom:12px;
+    }
+    main#homepage div.gioithieu_bg>div#gioithieu_ p{
+        margin-bottom: 12px;
+    }
+    main#homepage section#Viec h3{
+        font-size: 1.2rem;
+        width:70%;
+    }
+    main#homepage div.job{
+        height:50%;
+        
+        display: block;
+    }
+    main#homepage div.job>div{
+        display: block;
+    }
+    main#homepage div.job>div div{
+        width:100%;
+        margin-bottom:25px;
+    }
+    /* Main trang đánh giá */
+    div#list{
+        /* background-color: red; */
+        
+        display: none;
+    }
+    /* footer */
+    footer{
+        height:100%
+    }
+
+    footer div.ct>div.flex{
+        display: block;
+    }
+    footer div.ct>div.flex>div{
+        width:100%;
+    }
+    footer div.ct>div.flex>div#conTact{
+        width:70%;
+    }
+    footer div.ct ul{
+        left:0;
+    }
+    
+}
+@media (max-width: 400px) {
+    div#listss{
+        display: none;
+    }
+    /* CSS cho điện thoại */
+    .flex{
+        display: block !important;
+    }
+    #navbar #lt{
+        display: block;
+        
+    }
+    
+    #navbar div#favicon_homepage{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    #navbar div#favicon_homepage img{
+        width:15%;
+    }
+    #navbar>div.flex p:hover {
+        transform: translateX(5%);
+        background-color: #2c3e50;
+        color: white;
+    }
+    main#homepage section#timvieclam div>div.odd {
+        height: 90px;
+    
+    }
+    main#homepage section#timvieclam div>div.odd h1{
+        font-size: 8px;
+    }
+    main#homepage section#timvieclam div>div.even {
+        height:90px;
+    }
+    main#homepage section#timvieclam div>div.even h1{
+        font-size: 8px;
+    }
+    main#homepage section#timvieclam div>div h1#gioiT{
+        font-size: 1.5rem;
+        margin-top:50px;
+    }
+    main#homepage section#timvieclam div>div h3#gioiT2{
+        width:90%;
+        font-size: 12px;
+    }
+    main#homepage div#khampha div.khamphaLeft{
+        height:50px;
+    }
+    main#homepage div#khampha div.khamphaRight{
+        height: 50px;
+    }
+    main#homepage div#khamphavieclam h2{
+        font-size:12px;
+        margin:0;
+    }
+    main#homepage div#khamphavieclam h1{
+        font-size: 1.3rem;
+    }
+    main#homepage div#khamphavieclam h3{
+        font-size: .9rem;
+    }
+    main#homepage section div.gioithieu_bg{
+        display: block;
+    }  
+    main#homepage div.gioithieu_bg>div#gioithieu_{
+        margin: auto;
+        text-align: center;
+        width:90%;
+    }
+    main#homepage div.gioithieu_bg>div#gioithieu_img{
+        width:100%;
+        height:120px;
+        margin-bottom: 40px;
+    }
+    main#homepage div.gioithieu_bg>div#gioithieu_ h1{
+        font-size: 14px ;
+        text-align: center;
+        margin-bottom:12px;
+    }
+    main#homepage div.gioithieu_bg>div#gioithieu_ p{
+        margin-bottom: 12px;
+        font-size: 10px;
+    }
+    main#homepage section#Viec h3{
+        font-size: .7rem;
+        width:70%;
+    }
+    main#homepage section#Viec h1{
+        font-size:1.2rem;
+    }
+    main#homepage section#Viec div#nenViec div.cle:first-child{
+    right:5px;
+    top:25px;
+    background-color: #38b6ff;
+}
+main#homepage section#Viec div#nenViec div.cle:nth-child(2){
+    bottom:0px;
+    left:20%;
+    background-color: #499eff;
+    width:50px;
+    height:50px;
+}
+main#homepage section#Viec div#nenViec div.cle:nth-child(3){
+    top:-15%;
+    width:70px;
+    height:70px;
+    background-color: #5271ff;
+    left:5%;
+}
+main#homepage section#Viec div#nenViec div.cle:nth-child(4){
+
+    background-color: white;
+
+}
+main#homepage section#Viec div#nenViec div.cle:nth-child(5){
+    height:50px;
+    width:50px;
+    right:20%;
+    background-color: #5de0e6;
+}
+main#homepage section#Viec div#nenViec div.cle:nth-child(6){
+    height:85px;
+    width:85px;
+    z-index: -1;
+    left:8%;
+    background-color: white;
+}
+    main#homepage div.job{
+        height:50%;
+        
+        display: block;
+    }
+    main#homepage div.job>div{
+        display: block;
+    }
+    main#homepage div.job>div div{
+        width:100%;
+        margin-bottom:25px;
+    }
+    main#homepage div#bg_footer h3{
+        font-size: .9rem;
+    }
+    main#homepage div#bg_footer div#nhatuyendung span{
+        width:150px;
+        height:80px;
+        font-size:.9rem;
+    }
+    /* footer */
+    footer{
+        height:100%
+    }
+
+    footer div.ct>div.flex{
+        display: block;
+    }
+    footer div.ct>div.flex>div{
+        width:90%;
+    }
+    footer div.ct>div.flex>div#conTact{
+        width:70%;
+    }
+    footer div.ct ul{
+        left:0;
+    }
+    footer div:last-child{
+        font-size:.9rem;
+    }
+
+
+    /* CHo đăng nhập */
+    main#mainLogin h1{
+        font-size: 1.1rem;
+    }
+    main#mainLogin p{
+        font-size:.4rem;
+    }
+    main#mainLogin .container .form-a {
+        padding:5px;
+    }
+    main#mainLogin .container p{
+        font-size: .5rem;
+    }
+    main#mainLogin div#container{
+        margin-left: 20px;
+        margin-right:20px;
+    }
+    #navbar p{
+        font-size:.8rem;
+    }
+    #navbar #taiKhoan p{
+        font-size: .5rem;
+        background-color: #2c3e50;
+        color:white;
+    }
+
+}
